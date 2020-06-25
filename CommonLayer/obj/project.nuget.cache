@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "2fH1CQqRdpOChg/nyUfsb3ESLpaFBKz8mdv0HSTaNWWH9rZLETnI+Z7bvz75cWVN62MsoE5qvX1TfzlykT9SUA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\dell\\source\\repos\\JobCheck\\CommonLayer\\CommonLayer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\dell\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}

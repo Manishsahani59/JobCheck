@@ -1,0 +1,12 @@
+C:\Users\dell\source\repos\JobCheck\RepositeryLayer\bin\Debug\netcoreapp3.1\CommonLayer.dll
+C:\Users\dell\source\repos\JobCheck\RepositeryLayer\obj\Debug\netcoreapp3.1\RepositeryLayer.csprojAssemblyReference.cache
+C:\Users\dell\source\repos\JobCheck\RepositeryLayer\obj\Debug\netcoreapp3.1\RepositeryLayer.AssemblyInfoInputs.cache
+C:\Users\dell\source\repos\JobCheck\RepositeryLayer\obj\Debug\netcoreapp3.1\RepositeryLayer.AssemblyInfo.cs
+C:\Users\dell\source\repos\JobCheck\RepositeryLayer\bin\Debug\netcoreapp3.1\RepositeryLayer.deps.json
+C:\Users\dell\source\repos\JobCheck\RepositeryLayer\bin\Debug\netcoreapp3.1\RepositeryLayer.dll
+C:\Users\dell\source\repos\JobCheck\RepositeryLayer\bin\Debug\netcoreapp3.1\RepositeryLayer.pdb
+C:\Users\dell\source\repos\JobCheck\RepositeryLayer\bin\Debug\netcoreapp3.1\CommonLayer.pdb
+C:\Users\dell\source\repos\JobCheck\RepositeryLayer\obj\Debug\netcoreapp3.1\RepositeryLayer.csproj.CoreCompileInputs.cache
+C:\Users\dell\source\repos\JobCheck\RepositeryLayer\obj\Debug\netcoreapp3.1\RepositeryLayer.csproj.CopyComplete
+C:\Users\dell\source\repos\JobCheck\RepositeryLayer\obj\Debug\netcoreapp3.1\RepositeryLayer.dll
+C:\Users\dell\source\repos\JobCheck\RepositeryLayer\obj\Debug\netcoreapp3.1\RepositeryLayer.pdb

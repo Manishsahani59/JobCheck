@@ -1,0 +1,14 @@
+C:\Users\dell\source\repos\JobCheck\BusinessLayer\bin\Debug\netcoreapp3.1\BusinessLayer.deps.json
+C:\Users\dell\source\repos\JobCheck\BusinessLayer\bin\Debug\netcoreapp3.1\BusinessLayer.dll
+C:\Users\dell\source\repos\JobCheck\BusinessLayer\bin\Debug\netcoreapp3.1\BusinessLayer.pdb
+C:\Users\dell\source\repos\JobCheck\BusinessLayer\bin\Debug\netcoreapp3.1\CommonLayer.dll
+C:\Users\dell\source\repos\JobCheck\BusinessLayer\bin\Debug\netcoreapp3.1\RepositeryLayer.dll
+C:\Users\dell\source\repos\JobCheck\BusinessLayer\bin\Debug\netcoreapp3.1\CommonLayer.pdb
+C:\Users\dell\source\repos\JobCheck\BusinessLayer\bin\Debug\netcoreapp3.1\RepositeryLayer.pdb
+C:\Users\dell\source\repos\JobCheck\BusinessLayer\obj\Debug\netcoreapp3.1\BusinessLayer.csprojAssemblyReference.cache
+C:\Users\dell\source\repos\JobCheck\BusinessLayer\obj\Debug\netcoreapp3.1\BusinessLayer.AssemblyInfoInputs.cache
+C:\Users\dell\source\repos\JobCheck\BusinessLayer\obj\Debug\netcoreapp3.1\BusinessLayer.AssemblyInfo.cs
+C:\Users\dell\source\repos\JobCheck\BusinessLayer\obj\Debug\netcoreapp3.1\BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\dell\source\repos\JobCheck\BusinessLayer\obj\Debug\netcoreapp3.1\BusinessLayer.csproj.CopyComplete
+C:\Users\dell\source\repos\JobCheck\BusinessLayer\obj\Debug\netcoreapp3.1\BusinessLayer.dll
+C:\Users\dell\source\repos\JobCheck\BusinessLayer\obj\Debug\netcoreapp3.1\BusinessLayer.pdb

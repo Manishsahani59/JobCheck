@@ -1,0 +1,9 @@
+C:\Users\dell\source\repos\JobCheck\CommonLayer\bin\Debug\netcoreapp3.1\CommonLayer.deps.json
+C:\Users\dell\source\repos\JobCheck\CommonLayer\bin\Debug\netcoreapp3.1\CommonLayer.dll
+C:\Users\dell\source\repos\JobCheck\CommonLayer\bin\Debug\netcoreapp3.1\CommonLayer.pdb
+C:\Users\dell\source\repos\JobCheck\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.csprojAssemblyReference.cache
+C:\Users\dell\source\repos\JobCheck\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.AssemblyInfoInputs.cache
+C:\Users\dell\source\repos\JobCheck\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.AssemblyInfo.cs
+C:\Users\dell\source\repos\JobCheck\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.csproj.CoreCompileInputs.cache
+C:\Users\dell\source\repos\JobCheck\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.dll
+C:\Users\dell\source\repos\JobCheck\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.pdb
