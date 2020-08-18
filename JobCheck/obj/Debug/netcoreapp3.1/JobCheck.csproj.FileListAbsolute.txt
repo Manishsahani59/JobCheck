@@ -10,8 +10,6 @@ C:\Users\dell\source\repos\JobCheck\JobCheck\bin\Debug\netcoreapp3.1\JobCheck.pd
 C:\Users\dell\source\repos\JobCheck\JobCheck\obj\Debug\netcoreapp3.1\JobCheck.csprojAssemblyReference.cache
 C:\Users\dell\source\repos\JobCheck\JobCheck\obj\Debug\netcoreapp3.1\JobCheck.AssemblyInfoInputs.cache
 C:\Users\dell\source\repos\JobCheck\JobCheck\obj\Debug\netcoreapp3.1\JobCheck.AssemblyInfo.cs
-C:\Users\dell\source\repos\JobCheck\JobCheck\obj\Debug\netcoreapp3.1\JobCheck.csproj.CoreCompileInputs.cache
-C:\Users\dell\source\repos\JobCheck\JobCheck\obj\Debug\netcoreapp3.1\JobCheck.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\dell\source\repos\JobCheck\JobCheck\obj\Debug\netcoreapp3.1\JobCheck.RazorTargetAssemblyInfo.cache
 C:\Users\dell\source\repos\JobCheck\JobCheck\obj\Debug\netcoreapp3.1\staticwebassets\JobCheck.StaticWebAssets.Manifest.cache
 C:\Users\dell\source\repos\JobCheck\JobCheck\obj\Debug\netcoreapp3.1\staticwebassets\JobCheck.StaticWebAssets.xml
@@ -33,3 +31,10 @@ C:\Users\dell\source\repos\JobCheck\JobCheck\bin\Debug\netcoreapp3.1\BusinessLay
 C:\Users\dell\source\repos\JobCheck\JobCheck\bin\Debug\netcoreapp3.1\CommonLayer.pdb
 C:\Users\dell\source\repos\JobCheck\JobCheck\bin\Debug\netcoreapp3.1\RepositeryLayer.pdb
 C:\Users\dell\source\repos\JobCheck\JobCheck\obj\Debug\netcoreapp3.1\JobCheck.csproj.CopyComplete
+C:\Users\dell\source\repos\JobCheck\JobCheck\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\dell\source\repos\JobCheck\JobCheck\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\dell\source\repos\JobCheck\JobCheck\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\dell\source\repos\JobCheck\JobCheck\obj\Debug\netcoreapp3.1\JobCheck.csproj.CoreCompileInputs.cache
+C:\Users\dell\source\repos\JobCheck\JobCheck\obj\Debug\netcoreapp3.1\JobCheck.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\dell\source\repos\JobCheck\JobCheck\obj\Debug\netcoreapp3.1\JobCheck.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\dell\source\repos\JobCheck\JobCheck\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll

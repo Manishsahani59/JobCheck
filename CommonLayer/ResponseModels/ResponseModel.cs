@@ -7,12 +7,12 @@ using System.Text;
 
 namespace CommonLayer.ResponseModels
 {
-       public class GETIndustryTypeResppnseModel
+    public class GETIndustryTypeResppnseModel
         {
             public string IndustryType { get; set; }
         }
 
-       public class GETOpenJobListingResponseModel
+    public class GETOpenJobListingResponseModel
         { 
             public long RM_ClientRequirementID { get; set; }
             public string ClientName { get; set; }
@@ -39,7 +39,7 @@ namespace CommonLayer.ResponseModels
 
     }
 
-       public class GetDistrictListResponseModel
+    public class GetDistrictListResponseModel
        { 
             public int DistrictId { get; set; }
             public string DistrictName { get; set; }
@@ -50,10 +50,10 @@ namespace CommonLayer.ResponseModels
             public string CreatedOn { get; set; }
             public string UpdatedBy { get; set; }
             public string UpdatedOn { get; set; }
-            public bool isActive { get; set; }
+            public char isActive { get; set; }
  
     }
-        public class GetIndustryListResponseModel
+    public class GetIndustryListResponseModel
         {
             public int IndustryTypeId { get; set; }
             public string IndustryTypeName { get; set; }
@@ -73,7 +73,7 @@ namespace CommonLayer.ResponseModels
         public string CreatedOn { get; set; }
         public string UpdatedBy { get; set; }
         public string UpdatedOn { get; set; }
-        public bool IsActive { get; set; }
+        public char IsActive { get; set; }
     }
     public class GetLocationsListResponseModel
     {
@@ -88,8 +88,53 @@ namespace CommonLayer.ResponseModels
         public string CreatedOn { get; set; }
         public string UpdatedBy { get; set; }
         public string UpdatedOn { get; set; }
+        public char IsActive { get; set; }
+    }
+
+    public class GetQualificationTypeList {
+       public long QualificationTypeId { get; set; } 
+       public string QualificationTypeName { get; set; } 
+       public string QualificationTypeCode { get; set; }
+       public string CreatedBy { get; set; } 
+       public string CreatedOn { get; set; } 
+       public string UpdatedBy { get; set; }
+       public string UpdatedOn { get; set; } 
+       public string IsActive { get; set; }
+    }
+
+    public class GetStateListResponseModel { 
+        public long StateId { get; set; }
+        public string StateName { get; set; }
+        public string StateCode { get; set; }
+        public string CreatedBy { get; set; }
+        public string CreatedOn { get; set; }
+        public string UpdatedBy { get; set; }
+        public string UpdatedOn { get; set; }
+        public string IsActive { get; set; }
+    }
+
+    public class GetDepartmentListResponseModel {
+       public long DepartmentId { get; set; }
+        public string DepartmentName { get; set; } 
+        public string DepartmentCode { get; set; }
+        public string CreatedBy { get; set; } 
+        public string CreatedOn { get; set; }
+        public string UpdatedBy { get; set; }  
+        public string UpdatedOn{get;set;}  
+       public bool IsActive { get; set; }
+    }
+
+    public class DesignationlistResponseModel
+    {
+        public long DesignationId { get; set; }
+        public string DesignationName { get; set; }
+        public string DesignationCode { get; set; }
+        public string CreatedBy { get; set; }
+        public string CreatedOn { get; set; }
+        public string UpdatedBy { get; set; }
+        public string UpdatedOn { get; set; }
         public bool IsActive { get; set; }
     }
 
-   
+
 }

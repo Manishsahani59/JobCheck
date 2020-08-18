@@ -19,8 +19,13 @@ namespace RepositeryLayer.Services
         {
             _configuration = configuration;
         }
+        //GetLocationsListResponseModel GetLocation;
+        //SqlDataReader sdr;
+        private static string message;
 
-       public async Task<List<GETIndustryTypeResppnseModel>> GETIndustryType()
+
+     
+        public async Task<List<GETIndustryTypeResppnseModel>> GETIndustryType()
         {
             try
             {
@@ -37,11 +42,7 @@ namespace RepositeryLayer.Services
                     IndustryTypes.Add(IndustryType);
                 }
                 sdr.Close();
-                if (IndustryTypes.Count != 0 && IndustryTypes != null) {
-                    return IndustryTypes;
-                }
-                return null;
-
+                return (IndustryTypes.Count != 0 && IndustryTypes != null) ? IndustryTypes : null;
             }
             catch (Exception e)
             {
@@ -59,41 +60,40 @@ namespace RepositeryLayer.Services
                 sqlCommand.CommandType = CommandType.StoredProcedure;
                 await sqlConnection.OpenAsync();
                 SqlDataReader sdr = sqlCommand.ExecuteReader();
-                while (sdr.Read())
-                {
+                if (sdr.HasRows) {
                     GETOpenJobListingResponseModel GetOpenJob = new GETOpenJobListingResponseModel();
-                    GetOpenJob.RM_ClientRequirementID = Convert.ToInt32(sdr["RM_ClientRequirementID"]);
-                    GetOpenJob.ClientName = sdr["ClientName"].ToString();
-                    GetOpenJob.Branch = sdr["Branch"].ToString();
-                    GetOpenJob.Designation = sdr["Designation"].ToString();
-                    GetOpenJob.LocationName = sdr["LocationName"].ToString();
-                    GetOpenJob.Client_Ho_Location = sdr["Client HO Location"].ToString();
-                    GetOpenJob.CreatedDate = sdr["Created_Date"].ToString();
-                    GetOpenJob.CreatedBy = sdr["Created_By"].ToString();
-                    GetOpenJob.Role = sdr["Role"].ToString();
-                    GetOpenJob.CategoryName = sdr["CategoryName"].ToString();
-                    GetOpenJob.IndustryType= sdr["IndustryType"].ToString();
-                    GetOpenJob.HiringManagerName = sdr["HiringManagerName"].ToString();
-                    GetOpenJob.HiringManagerEmailId = sdr["HiringManagerEmailId"].ToString();
-                    GetOpenJob.HiringManagerContactNo = sdr["HiringManagerContactNo"].ToString();
-                    GetOpenJob.FromSalary = sdr["FromSalary"].ToString();
-                    GetOpenJob.ToSalary = sdr["ToSalary"].ToString();
-                    GetOpenJob.FromExperince = sdr["FromExperince"].ToString();
-                    GetOpenJob.ToExperince = sdr["ToExperince"].ToString();
-                    GetOpenJob.RM_PositionCount = sdr["RM_PositionCount"].ToString();
-                    GetOpenJob.RecievedDate = sdr["Received_date"].ToString();
-                    GetOpenJob.EndDate = sdr["End_Date"].ToString();
-                    GetOpenJob.StateName = sdr["StateName"].ToString();
-                    OpenJobListing.Add(GetOpenJob);
+                    while (sdr.Read())
+                    {
+
+                        GetOpenJob.RM_ClientRequirementID = Convert.ToInt32(sdr["RM_ClientRequirementID"]);
+                        GetOpenJob.ClientName = sdr["ClientName"].ToString();
+                        GetOpenJob.Branch = sdr["Branch"].ToString();
+                        GetOpenJob.Designation = sdr["Designation"].ToString();
+                        GetOpenJob.LocationName = sdr["LocationName"].ToString();
+                        GetOpenJob.Client_Ho_Location = sdr["Client HO Location"].ToString();
+                        GetOpenJob.CreatedDate = sdr["Created_Date"].ToString();
+                        GetOpenJob.CreatedBy = sdr["Created_By"].ToString();
+                        GetOpenJob.Role = sdr["Role"].ToString();
+                        GetOpenJob.CategoryName = sdr["CategoryName"].ToString();
+                        GetOpenJob.IndustryType = sdr["IndustryType"].ToString();
+                        GetOpenJob.HiringManagerName = sdr["HiringManagerName"].ToString();
+                        GetOpenJob.HiringManagerEmailId = sdr["HiringManagerEmailId"].ToString();
+                        GetOpenJob.HiringManagerContactNo = sdr["HiringManagerContactNo"].ToString();
+                        GetOpenJob.FromSalary = sdr["FromSalary"].ToString();
+                        GetOpenJob.ToSalary = sdr["ToSalary"].ToString();
+                        GetOpenJob.FromExperince = sdr["FromExperince"].ToString();
+                        GetOpenJob.ToExperince = sdr["ToExperince"].ToString();
+                        GetOpenJob.RM_PositionCount = sdr["RM_PositionCount"].ToString();
+                        GetOpenJob.RecievedDate = sdr["Received_date"].ToString();
+                        GetOpenJob.EndDate = sdr["End_Date"].ToString();
+                        GetOpenJob.StateName = sdr["StateName"].ToString();
+                        OpenJobListing.Add(GetOpenJob);
+                    }
                 }
+                
                 sdr.Close();
-                if (OpenJobListing != null && OpenJobListing.Count != 0)
-                {
-                    return OpenJobListing;
-                }
-                else {
-                    return null;
-                }
+                return (OpenJobListing != null && OpenJobListing.Count != 0) ? OpenJobListing : null;
+               
             }
             catch (Exception e)
             {
@@ -120,23 +120,17 @@ namespace RepositeryLayer.Services
                     GetDistrict.DistrictId= Convert.ToInt32(sdr["DistrictId"]);
                     GetDistrict.DistrictName = sdr["DistrictName"].ToString();
                     GetDistrict.DistrictCode = Convert.ToInt32(sdr["DistrictCode"]);
-                    GetDistrict.StateId = Convert.ToInt32(sdr["StateId"]);
-                    GetDistrict.StateName = sdr["StateName"].ToString();
                     GetDistrict.CreatedBy= sdr["StateId"].ToString();
-                    GetDistrict.CreatedOn= sdr["StateId"].ToString();
-                    GetDistrict.UpdatedBy = sdr["StateId"].ToString();
-                    GetDistrict.UpdatedOn = sdr["StateId"].ToString();
-                    GetDistrict.isActive = Convert.ToBoolean(sdr["isActive"]);
+                    GetDistrict.CreatedOn= sdr["CreatedBy"].ToString();
+                    GetDistrict.UpdatedBy = sdr["CreatedOn"].ToString();
+                    GetDistrict.UpdatedOn = sdr["UpdatedBy"].ToString();
+                    GetDistrict.UpdatedOn = sdr["UpdatedOn"].ToString();
+                    GetDistrict.isActive = Convert.ToChar(sdr["isActive"]);
                     DistrictList.Add(GetDistrict);
                 }
                 sdr.Close();
-                if (DistrictList != null && DistrictList.Count!=0)
-                {
-                    return DistrictList;
-                }
-                else {
-                    return null;
-                }
+                return (DistrictList != null && DistrictList.Count != 0) ? DistrictList : null;
+               
             }
             catch (Exception e)
             {
@@ -171,13 +165,7 @@ namespace RepositeryLayer.Services
                     IndustryList.Add(GetIndustry);
                 }
                 sdr.Close();
-                if (IndustryList != null && IndustryList.Count != 0)
-                {
-                    return IndustryList;
-                }
-                else {
-                    return null;
-                }
+                return (IndustryList != null && IndustryList.Count != 0) ? IndustryList : null;
             }
             catch (Exception e)
             {
@@ -207,16 +195,13 @@ namespace RepositeryLayer.Services
                         CreatedOn=sdr["CreatedOn"].ToString(),
                         UpdatedBy=sdr["UpdatedBy"].ToString(),
                         UpdatedOn=sdr["UpdatedOn"].ToString(),
-                        IsActive=Convert.ToBoolean(sdr["IsActive"]),
+                        IsActive=Convert.ToChar(sdr["IsActive"]),
                     };
                     GetSkillTypeList.Add(GetSkill);
                 }
                 sdr.Close();
-                if (GetSkillTypeList != null && GetSkillTypeList.Count != 0)
-                {
-                    return GetSkillTypeList;
-                }
-                else { return null; }
+                return (GetSkillTypeList != null && GetSkillTypeList.Count != 0) ? GetSkillTypeList : null;
+           
             }
             catch (Exception e)
             {
@@ -251,18 +236,12 @@ namespace RepositeryLayer.Services
                         CreatedOn = sdr["CreatedOn"].ToString(),
                         UpdatedBy = sdr["UpdatedBy"].ToString(),
                         UpdatedOn=sdr["UpdatedOn"].ToString(),
-                        IsActive=Convert.ToBoolean(sdr["IsActive"]),
+                        IsActive=Convert.ToChar(sdr["IsActive"]),
                     };
                     GetLocationsList.Add(GetLocation);
                 }
                 sdr.Close();
-                if (GetLocationsList != null && GetLocationsList.Count != 0)
-                {
-                    return GetLocationsList;
-                }
-                else {
-                    return null;
-                }
+                return (GetLocationsList != null && GetLocationsList.Count != 0) ? GetLocationsList : null;
             }
             catch (Exception e)
             {
@@ -270,5 +249,376 @@ namespace RepositeryLayer.Services
                 throw new ApplicationException(e.Message);
             }
         }
+
+        public async Task<List<GetQualificationTypeList>> GetQualificationTypeList(int QualificationTypeId, int UserId)
+        {
+            try
+            {
+                List<GetQualificationTypeList> GetQualificationTypeList = new List<GetQualificationTypeList>();
+                SqlConnection sqlConnection = new SqlConnection(_configuration["ConnectionString:DigiJobCheck"]);
+                SqlCommand sqlCommand = new SqlCommand("[usp_GetQualificationTypeList]", sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("@intQualificationTypeId",QualificationTypeId );
+                sqlCommand.Parameters.AddWithValue("@intUserId", UserId);
+                await sqlConnection.OpenAsync();
+                SqlDataReader sdr = sqlCommand.ExecuteReader();
+                while (sdr.Read())
+                {
+                    GetQualificationTypeList GetQualificationType = new GetQualificationTypeList()
+                    {
+                        QualificationTypeId = Convert.ToInt32(sdr["QualificationTypeId"]),
+                        QualificationTypeName = sdr["QualificationTypeName"].ToString(),
+                        QualificationTypeCode = sdr["QualificationTypeCode"].ToString(),
+                        CreatedBy=sdr["CreatedBy"].ToString(),
+                        CreatedOn=sdr["CreatedOn"].ToString(),
+                        UpdatedBy=sdr["UpdatedBy"].ToString(),
+                        UpdatedOn=sdr["UpdatedOn"].ToString(),
+                        IsActive= sdr["IsActive"].ToString(),
+                    };
+                    GetQualificationTypeList.Add(GetQualificationType);
+                }
+                sdr.Close();
+                return (GetQualificationTypeList != null && GetQualificationTypeList.Count != 0) ? GetQualificationTypeList : null;
+
+            }
+            catch (Exception e)
+            {
+
+                throw new ApplicationException(e.Message);
+            }
+        }
+
+        public string InsertUpdateDeleteLocation(LocationRequestModel LocationInfo)
+        {
+            try
+            {
+                SqlConnection sqlConnection = new SqlConnection(_configuration["ConnectionString:DigiJobCheck"]);
+                SqlCommand sqlCommand = new SqlCommand("[usp_InsertUpdateDeleteLocation]", sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("@varType",LocationInfo.ActionType);
+                sqlCommand.Parameters.AddWithValue("@intLocationId",LocationInfo.LocationId);
+                sqlCommand.Parameters.AddWithValue("@intDistrictId",LocationInfo.DistrictId);
+                sqlCommand.Parameters.AddWithValue("@intStateId",LocationInfo.StateId);
+                sqlCommand.Parameters.AddWithValue("@varLocationName",LocationInfo.LocationName);
+                sqlCommand.Parameters.AddWithValue("@varLocationCode",LocationInfo.LocationCode);
+                sqlCommand.Parameters.AddWithValue("@intUserId",LocationInfo.UserId);
+                sqlConnection.Open();
+                var sdr = sqlCommand.ExecuteReader();
+                if (sdr.HasRows)
+                {
+                    while (sdr.Read())
+                    {
+                        message = sdr["Message"].ToString();
+                    }
+                }
+               sdr.Close();
+               return message;
+
+            }
+            catch (Exception e)
+            {
+
+                throw new ApplicationException(e.Message);
+            }
+        }
+
+        public string Department_InsertUpdateDelete(DepartmentRequestModel DepartmentInfo)
+        {
+            try
+            {
+                SqlConnection sqlConnection = new SqlConnection(_configuration["ConnectionString:DigiJobCheck"]);
+                SqlCommand sqlCommand = new SqlCommand("[usp_InsertUpdateDeleteDepartment]", sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("@varType", DepartmentInfo.ActionType);
+                sqlCommand.Parameters.AddWithValue("@intDepartmentId", DepartmentInfo.DepartmentId);
+                sqlCommand.Parameters.AddWithValue("@varDepartmentName", DepartmentInfo.DepartmentName);
+                sqlCommand.Parameters.AddWithValue("@varDepartmentCode", DepartmentInfo.DepartmentCode);
+                sqlCommand.Parameters.AddWithValue("@intUserId", DepartmentInfo.UserId);
+                sqlConnection.Open();
+                var sdr = sqlCommand.ExecuteReader();
+                if (sdr.HasRows)
+                {
+                    while (sdr.Read())
+                    {
+                        message = sdr["Message"].ToString();
+                    }
+                }
+                sdr.Close();
+                return message;
+
+            }
+            catch (Exception e)
+            {
+
+                throw new ApplicationException(e.Message);
+            }
+        }
+
+        public string InsertUpdateDeleteIndustryType(IndustryTypeRequestModel IndustryTypeInfo)
+        {
+            try
+            {
+                SqlConnection sqlConnection = new SqlConnection(_configuration["ConnectionString:DigiJobCheck"]);
+                SqlCommand sqlCommand = new SqlCommand("[usp_InsertUpdateDeleteIndustryType]", sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("@varType", IndustryTypeInfo.ActionType);
+                sqlCommand.Parameters.AddWithValue("@intIndustryTypeId", IndustryTypeInfo.IndustryTypeId);
+                sqlCommand.Parameters.AddWithValue("@varIndustryTypeName", IndustryTypeInfo.IndustryTypeName);
+                sqlCommand.Parameters.AddWithValue("@varIndustryTypeCode", IndustryTypeInfo.IndustryTypeCode);
+                sqlCommand.Parameters.AddWithValue("@intUserId", IndustryTypeInfo.UserId);
+                sqlConnection.Open();
+                var sdr = sqlCommand.ExecuteReader();
+                if (sdr.HasRows)
+                {
+                    while (sdr.Read())
+                    {
+                        message = sdr["Message"].ToString();
+                    }
+                }
+                sdr.Close();
+                return message;
+            }
+            catch (Exception e)
+            {
+                throw new ApplicationException(e.Message);
+            }
+        }
+
+        public string InsertUpdateDeleteDistrict(DistrictRequestModel DistrictInfo)
+        {
+            try
+            {
+                SqlConnection sqlConnection = new SqlConnection(_configuration["ConnectionString:DigiJobCheck"]);
+                SqlCommand sqlCommand = new SqlCommand("[usp_InsertUpdateDeleteDistrict]", sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("@varType", DistrictInfo.ActionType);
+                sqlCommand.Parameters.AddWithValue("@intDistrictId", DistrictInfo.DistrictId);
+                sqlCommand.Parameters.AddWithValue("@intStateId", DistrictInfo.StateId);
+                sqlCommand.Parameters.AddWithValue("@varDistrictName", DistrictInfo.DistrictName);
+                sqlCommand.Parameters.AddWithValue("@varDistrictCode", DistrictInfo.DistrictCode);
+                sqlCommand.Parameters.AddWithValue("@intUserId", DistrictInfo.UserId);
+                sqlConnection.Open();
+                var sdr = sqlCommand.ExecuteReader();
+                if (sdr.HasRows)
+                {
+                    while (sdr.Read())
+                    {
+                        message = sdr["Message"].ToString();
+                    }
+                }
+                sdr.Close();
+                return message;
+            }
+            catch (Exception e)
+            {
+                throw new ApplicationException(e.Message);
+            }
+        }
+        public string InsertUpdateDeleteQualificationType(QualificationRequestModel QualificationInfo)
+        {
+            try
+            {
+                SqlConnection sqlConnection = new SqlConnection(_configuration["ConnectionString:DigiJobCheck"]);
+                SqlCommand sqlCommand = new SqlCommand("[usp_InsertUpdateDeleteQualificationType]", sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("@varType", QualificationInfo.ActionType);
+                sqlCommand.Parameters.AddWithValue("@intQualificationTypeId", QualificationInfo.QualificationTypeId);
+                sqlCommand.Parameters.AddWithValue("@varQualificationTypeName", QualificationInfo.QualificationTypeName);
+                sqlCommand.Parameters.AddWithValue("@varQualificationTypeCode", QualificationInfo.QualificationTypeCode);
+                sqlCommand.Parameters.AddWithValue("@intUserId", QualificationInfo.UserId);
+                sqlConnection.Open();
+                var sdr = sqlCommand.ExecuteReader();
+                if (sdr.HasRows)
+                {
+                    while (sdr.Read())
+                    {
+                        message = sdr["Message"].ToString();
+                    }
+                }
+                sdr.Close();
+                return message;
+            }
+            catch (Exception e)
+            {
+
+                throw new ApplicationException(e.Message);
+            }
+        }
+
+        public string InsertUpdateDeleteDesignation(DesignationRequestModel DesignationInfo)
+        {
+            try
+            {
+                SqlConnection sqlConnection = new SqlConnection(_configuration["ConnectionString:DigiJobCheck"]);
+                SqlCommand sqlCommand = new SqlCommand("[usp_InsertUpdateDeleteDesignation]", sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("@varType", DesignationInfo.ActionType);
+                sqlCommand.Parameters.AddWithValue("@intDesignationId", DesignationInfo.DesignationId);
+                sqlCommand.Parameters.AddWithValue("@varDesignationName", DesignationInfo.DesignationName);
+                sqlCommand.Parameters.AddWithValue("@varDesignationCode", DesignationInfo.DesignationCode);
+                sqlCommand.Parameters.AddWithValue("@intUserId", DesignationInfo.UserId);
+                sqlConnection.Open();
+                var sdr = sqlCommand.ExecuteReader();
+                if (sdr.HasRows)
+                {
+                    while (sdr.Read())
+                    {
+                        message = sdr["Message"].ToString();
+                    }
+                }
+                sdr.Close();
+                return message;
+            }
+            catch (Exception e)
+            {
+
+                throw new ApplicationException(e.Message);
+            }
+        }
+
+        public string InsertUpdateDeleteState(StateRequestModel StateInfo)
+        {
+            try
+            {
+                SqlConnection sqlConnection = new SqlConnection(_configuration["ConnectionString:DigiJobCheck"]);
+                SqlCommand sqlCommand = new SqlCommand("[usp_InsertUpdateDeleteState]", sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("@varType", StateInfo.ActionType);
+                sqlCommand.Parameters.AddWithValue("@intStateId", StateInfo.StateId);
+                sqlCommand.Parameters.AddWithValue("@varStateName", StateInfo.StateName);
+                sqlCommand.Parameters.AddWithValue("@varStateCode", StateInfo.StateCode);
+                sqlCommand.Parameters.AddWithValue("@intUserId", StateInfo.UserId);
+                sqlConnection.Open();
+                var sdr = sqlCommand.ExecuteReader();
+                if (sdr.HasRows)
+                {
+                    while (sdr.Read())
+                    {
+                        message = sdr["Message"].ToString();
+                    }
+                }
+                sdr.Close();
+                return message;
+            }
+            catch (Exception e)
+            {
+
+                throw new ApplicationException(e.Message);
+            }
+        }
+
+        public async Task<List<GetStateListResponseModel>> GetStateList(int stateId, int UserId)
+        {
+            try
+            {
+                List<GetStateListResponseModel> GetstateList = new List<GetStateListResponseModel>();
+                SqlConnection sqlConnection = new SqlConnection(_configuration["ConnectionString:DigiJobCheck"]);
+                SqlCommand sqlCommand = new SqlCommand("[usp_GetStateList]", sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("@intStateId", stateId);
+                sqlCommand.Parameters.AddWithValue("@intUserId", UserId);
+                await sqlConnection.OpenAsync();
+                SqlDataReader sdr = sqlCommand.ExecuteReader();
+                while (sdr.Read())
+                {
+                    GetStateListResponseModel GetStateData = new GetStateListResponseModel()
+                    {
+                        StateId = Convert.ToInt32(sdr["StateId"]),
+                        StateName = sdr["StateName"].ToString(),
+                        StateCode= sdr["StateCode"].ToString(),
+                        CreatedBy = sdr["CreatedBy"].ToString(),
+                        CreatedOn = sdr["CreatedOn"].ToString(),
+                        UpdatedBy = sdr["UpdatedBy"].ToString(),
+                        UpdatedOn = sdr["UpdatedOn"].ToString(),
+                        IsActive = sdr["IsActive"].ToString(),
+                    };
+                    GetstateList.Add(GetStateData);
+                }
+                sdr.Close();
+                return (GetstateList != null && GetstateList.Count != 0) ? GetstateList : null;
+            }
+            catch (Exception e)
+            {
+
+                throw new ApplicationException(e.Message);
+            }
+        }
+
+        public async Task<List<GetDepartmentListResponseModel>> GetDepartmentList(int DepartmentId, int UserId)
+        {
+            try
+            {
+                List<GetDepartmentListResponseModel> GetDepartmentList = new List<GetDepartmentListResponseModel>();
+                SqlConnection sqlConnection = new SqlConnection(_configuration["ConnectionString:DigiJobCheck"]);
+                SqlCommand sqlCommand = new SqlCommand("[usp_GetDepartmentList]", sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("intDepartmentId", DepartmentId);
+                sqlCommand.Parameters.AddWithValue("@intUserId", UserId);
+                await sqlConnection.OpenAsync();
+                SqlDataReader sdr = sqlCommand.ExecuteReader();
+                while (sdr.Read())
+                {
+                    GetDepartmentListResponseModel GetDepartment = new GetDepartmentListResponseModel()
+                    {
+                        DepartmentId = Convert.ToInt32(sdr["DepartmentId"]),
+                        DepartmentName = sdr["DepartmentName"].ToString(),
+                        DepartmentCode= sdr["DepartmentCode"].ToString(),
+                        CreatedBy = sdr["CreatedBy"].ToString(),
+                        CreatedOn = sdr["CreatedOn"].ToString(),
+                        UpdatedBy = sdr["UpdatedBy"].ToString(),
+                        UpdatedOn = sdr["UpdatedOn"].ToString(),
+                        IsActive =  Convert.ToBoolean(sdr["IsActive"]),
+                    };
+                    GetDepartmentList.Add(GetDepartment);
+                }
+                sdr.Close();
+                return (GetDepartmentList != null && GetDepartmentList.Count != 0) ? GetDepartmentList : null;
+            }
+            catch (Exception e)
+            {
+
+                throw new ApplicationException(e.Message);
+            }
+        }
+
+        public async Task<List<DesignationlistResponseModel>> GetDesignationlist(int DesignationId, int UserId)
+        {
+            try
+            {
+                List<DesignationlistResponseModel> GetDesignationlist = new List<DesignationlistResponseModel>();
+                SqlConnection sqlConnection = new SqlConnection(_configuration["ConnectionString:DigiJobCheck"]);
+                SqlCommand sqlCommand = new SqlCommand("[usp_GetDesignationList]", sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("@intDesignationId", DesignationId);
+                sqlCommand.Parameters.AddWithValue("@intUserId", UserId);
+                await sqlConnection.OpenAsync();
+                SqlDataReader sdr = sqlCommand.ExecuteReader();
+                while (sdr.Read())
+                {
+                    DesignationlistResponseModel GetDesignation = new DesignationlistResponseModel()
+                    {
+                        DesignationId = Convert.ToInt32(sdr["DesignationId"]),
+                        DesignationName= sdr["DesignationName"].ToString(),
+                        DesignationCode = sdr["DesignationCode"].ToString(),
+                        CreatedBy = sdr["CreatedBy"].ToString(),
+                        CreatedOn = sdr["CreatedOn"].ToString(),
+                        UpdatedBy = sdr["UpdatedBy"].ToString(),
+                        UpdatedOn = sdr["UpdatedOn"].ToString(),
+                        IsActive = Convert.ToBoolean(sdr["IsActive"]),
+                    };
+                    GetDesignationlist.Add(GetDesignation);
+                }
+                sdr.Close();
+                return (GetDesignationlist != null && GetDesignationlist.Count != 0) ? GetDesignationlist : null;
+            }
+            catch (Exception e)
+            {
+
+                throw new ApplicationException(e.Message);
+            }
+        }
+
+      
+
     }
 }

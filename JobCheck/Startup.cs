@@ -12,8 +12,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.OpenApi.Models;
 using RepositeryLayer.Interfaces;
 using RepositeryLayer.Services;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace JobCheck
 {
@@ -32,6 +34,24 @@ namespace JobCheck
             services.AddControllers();
             services.AddTransient<IAdminBusinessLayer, AdminBusinessLayer>();
             services.AddTransient<IAdminRepositeryLayer, AdminRepositeryLayer>();
+            services.AddControllers();
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo {
+                   Title = "Digi JobCheck", Version = "5.0.0" });
+            });
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy",
+                builder =>
+                {
+                    builder.WithOrigins("*")
+                    .AllowAnyHeader()
+                    .AllowAnyMethod();
+                });
+            });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -41,12 +61,22 @@ namespace JobCheck
             {
                 app.UseDeveloperExceptionPage();
             }
+            else
+            {
+                app.UseHsts();
+            }
 
             app.UseHttpsRedirection();
-
             app.UseRouting();
-
             app.UseAuthorization();
+            app.UseCors("CorsPolicy");
+
+            app.UseSwagger();
+
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Swagger DidiJobCheck 5.0.0");
+            });
 
             app.UseEndpoints(endpoints =>
             {

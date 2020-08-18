@@ -1,4 +1,5 @@
 ﻿using BusinessLayer.Interfaces;
+using CommonLayer.RequestModels;
 using CommonLayer.ResponseModels;
 using RepositeryLayer.Interfaces;
 using RepositeryLayer.Services;
@@ -13,15 +14,111 @@ namespace BusinessLayer.Services
     public class AdminBusinessLayer : IAdminBusinessLayer
     {
         IAdminRepositeryLayer AdminRepositeryLayer;
-        public AdminBusinessLayer(IAdminRepositeryLayer di_AdminRepsoiteryLayer) {
+        public AdminBusinessLayer(IAdminRepositeryLayer di_AdminRepsoiteryLayer)
+        {
             AdminRepositeryLayer = di_AdminRepsoiteryLayer;
         }
 
+        public string InsertUpdateDeleteDesignation(DesignationRequestModel DesignationInfo)
+        {
+            try
+            {
+                var Message = AdminRepositeryLayer.InsertUpdateDeleteDesignation(DesignationInfo);
+                return Message;
+            }
+            catch (Exception e)
+            {
+
+                throw new ApplicationException(e.Message);
+            }
+        }
+        public string InsertUpdateDeleteState(StateRequestModel StateInfo)
+        {
+            try
+            {
+                var Message = AdminRepositeryLayer.InsertUpdateDeleteState(StateInfo);
+                return Message;
+            }
+            catch (Exception e)
+            {
+
+                throw new ApplicationException(e.Message);
+            }
+        }
+
+        public string InsertUpdateDeleteQualificationType(QualificationRequestModel QualificationInfo)
+        {
+            try
+            {
+                var Message = AdminRepositeryLayer.InsertUpdateDeleteQualificationType(QualificationInfo);
+                return Message;
+            }
+            catch (Exception e)
+            {
+
+                throw new ApplicationException(e.Message);
+            }
+        }
+        public string InsertUpdateDeleteLocation(LocationRequestModel LocationInfo)
+        {
+            try
+            {
+                var GetLocation = AdminRepositeryLayer.InsertUpdateDeleteLocation(LocationInfo);
+                return GetLocation;
+            }
+            catch (Exception e)
+            {
+
+                throw new ApplicationException(e.Message);
+            }
+        }
+
+        public string Department_InsertUpdateDelete(DepartmentRequestModel DepartmentInfo)
+        {
+            try
+            {
+                var Message = AdminRepositeryLayer.Department_InsertUpdateDelete(DepartmentInfo);
+                return Message;
+            }
+            catch (Exception e)
+            {
+                throw new ApplicationException(e.Message);
+            }
+        }
+
+        public string InsertUpdateDeleteIndustryType(IndustryTypeRequestModel IndustryTypeInfo)
+        {
+            try
+            {
+                var Message = AdminRepositeryLayer.InsertUpdateDeleteIndustryType(IndustryTypeInfo);
+                return Message;
+            }
+            catch (Exception e)
+            {
+
+                throw new ApplicationException(e.Message);
+            }
+        }
+
+        public string InsertUpdateDeleteDistrict(DistrictRequestModel DistrictInfo)
+        {
+            try
+            {
+                var Message = AdminRepositeryLayer.InsertUpdateDeleteDistrict(DistrictInfo);
+                return Message;
+            }
+            catch (Exception e)
+            {
+
+                throw new ApplicationException(e.Message);
+            }
+            return null;
+        }
         public async Task<List<GetDistrictListResponseModel>> GetDistrictList(int UserId, int DistrictId)
         {
             try
             {
-              var GetDistrictList = await AdminRepositeryLayer.GetDistrictList(UserId, DistrictId);
+                var GetDistrictList = await AdminRepositeryLayer.GetDistrictList(UserId, DistrictId);
                 if (GetDistrictList != null && GetDistrictList.Count != 0)
                 {
                     return GetDistrictList;
@@ -58,12 +155,13 @@ namespace BusinessLayer.Services
         {
             try
             {
-               var GETIndustryType=await AdminRepositeryLayer.GETIndustryType();
-                if (GETIndustryType.Count != 0 && GETIndustryType!=null)
+                var GETIndustryType = await AdminRepositeryLayer.GETIndustryType();
+                if (GETIndustryType.Count != 0 && GETIndustryType != null)
                 {
                     return GETIndustryType;
                 }
-                else {
+                else
+                {
                     return null;
                 }
             }
@@ -83,7 +181,8 @@ namespace BusinessLayer.Services
                 {
                     return GetLocationList;
                 }
-                else {
+                else
+                {
                     return null;
                 }
             }
@@ -102,7 +201,8 @@ namespace BusinessLayer.Services
                 {
                     return GETOpenJobListing;
                 }
-                else {
+                else
+                {
                     return null;
                 }
             }
@@ -121,7 +221,8 @@ namespace BusinessLayer.Services
                 {
                     return GetSkillList;
                 }
-                else {
+                else
+                {
                     return null;
                 }
             }
@@ -129,6 +230,85 @@ namespace BusinessLayer.Services
             {
                 throw new ApplicationException(e.Message);
             }
+        }
+
+        public async Task<List<GetQualificationTypeList>> GetQualificationTypeList(int QualificationTypeId, int UserId)
+        {
+            try
+            {
+                var GetQualificationType = await AdminRepositeryLayer.GetQualificationTypeList(QualificationTypeId, UserId);
+                if (GetQualificationType != null && GetQualificationType.Count != 0)
+                {
+                    return GetQualificationType;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch (Exception e)
+            {
+                throw new ApplicationException(e.Message);
+            }
+        }
+
+        public async Task<List<GetStateListResponseModel>> GetStateList(int stateId, int UserId)
+        {
+            try
+            {
+                var GetStateList = await AdminRepositeryLayer.GetStateList(stateId, UserId);
+                if (GetStateList != null && GetStateList.Count != 0)
+                {
+                    return GetStateList;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch (Exception e)
+            {
+
+                throw new ApplicationException(e.Message);
+            }
+        }
+
+        public async Task<List<GetDepartmentListResponseModel>> GetDepartmentList(int DepartmentId, int UserId)
+        {
+            try
+            {
+                var GetDepartmentList = await AdminRepositeryLayer.GetDepartmentList(DepartmentId, UserId);
+                if (GetDepartmentList != null && GetDepartmentList.Count != 0)
+                {
+                    return GetDepartmentList;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch (Exception e)
+            {
+
+                throw new ApplicationException(e.Message);
+            }
+        }
+
+        public async Task<List<DesignationlistResponseModel>> GetDesignationlist(int DesignationId, int UserId)
+        {
+
+            try
+            {
+                var GetDepartmentList = await AdminRepositeryLayer.GetDesignationlist(DesignationId, UserId);
+                return (GetDepartmentList != null && GetDepartmentList.Count != 0) ? GetDepartmentList : null;
+            }
+            catch (Exception e)
+            {
+
+                throw new ApplicationException(e.Message);
+            }
+
+
         }
     }
 }
