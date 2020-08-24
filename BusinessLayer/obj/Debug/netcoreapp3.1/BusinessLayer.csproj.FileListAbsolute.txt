@@ -12,3 +12,17 @@ C:\Users\dell\source\repos\JobCheck\BusinessLayer\obj\Debug\netcoreapp3.1\Busine
 C:\Users\dell\source\repos\JobCheck\BusinessLayer\obj\Debug\netcoreapp3.1\BusinessLayer.csproj.CopyComplete
 C:\Users\dell\source\repos\JobCheck\BusinessLayer\obj\Debug\netcoreapp3.1\BusinessLayer.dll
 C:\Users\dell\source\repos\JobCheck\BusinessLayer\obj\Debug\netcoreapp3.1\BusinessLayer.pdb
+D:\FMAPI\JobCheck\BusinessLayer\bin\Debug\netcoreapp3.1\BusinessLayer.deps.json
+D:\FMAPI\JobCheck\BusinessLayer\bin\Debug\netcoreapp3.1\BusinessLayer.dll
+D:\FMAPI\JobCheck\BusinessLayer\bin\Debug\netcoreapp3.1\BusinessLayer.pdb
+D:\FMAPI\JobCheck\BusinessLayer\bin\Debug\netcoreapp3.1\CommonLayer.dll
+D:\FMAPI\JobCheck\BusinessLayer\bin\Debug\netcoreapp3.1\RepositeryLayer.dll
+D:\FMAPI\JobCheck\BusinessLayer\bin\Debug\netcoreapp3.1\CommonLayer.pdb
+D:\FMAPI\JobCheck\BusinessLayer\bin\Debug\netcoreapp3.1\RepositeryLayer.pdb
+D:\FMAPI\JobCheck\BusinessLayer\obj\Debug\netcoreapp3.1\BusinessLayer.csprojAssemblyReference.cache
+D:\FMAPI\JobCheck\BusinessLayer\obj\Debug\netcoreapp3.1\BusinessLayer.AssemblyInfoInputs.cache
+D:\FMAPI\JobCheck\BusinessLayer\obj\Debug\netcoreapp3.1\BusinessLayer.AssemblyInfo.cs
+D:\FMAPI\JobCheck\BusinessLayer\obj\Debug\netcoreapp3.1\BusinessLayer.csproj.CoreCompileInputs.cache
+D:\FMAPI\JobCheck\BusinessLayer\obj\Debug\netcoreapp3.1\BusinessLayer.csproj.CopyComplete
+D:\FMAPI\JobCheck\BusinessLayer\obj\Debug\netcoreapp3.1\BusinessLayer.dll
+D:\FMAPI\JobCheck\BusinessLayer\obj\Debug\netcoreapp3.1\BusinessLayer.pdb

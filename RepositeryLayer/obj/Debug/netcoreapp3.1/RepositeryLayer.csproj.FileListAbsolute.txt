@@ -10,3 +10,15 @@ C:\Users\dell\source\repos\JobCheck\RepositeryLayer\obj\Debug\netcoreapp3.1\Repo
 C:\Users\dell\source\repos\JobCheck\RepositeryLayer\obj\Debug\netcoreapp3.1\RepositeryLayer.csproj.CopyComplete
 C:\Users\dell\source\repos\JobCheck\RepositeryLayer\obj\Debug\netcoreapp3.1\RepositeryLayer.dll
 C:\Users\dell\source\repos\JobCheck\RepositeryLayer\obj\Debug\netcoreapp3.1\RepositeryLayer.pdb
+D:\FMAPI\JobCheck\RepositeryLayer\bin\Debug\netcoreapp3.1\RepositeryLayer.deps.json
+D:\FMAPI\JobCheck\RepositeryLayer\bin\Debug\netcoreapp3.1\RepositeryLayer.dll
+D:\FMAPI\JobCheck\RepositeryLayer\bin\Debug\netcoreapp3.1\RepositeryLayer.pdb
+D:\FMAPI\JobCheck\RepositeryLayer\bin\Debug\netcoreapp3.1\CommonLayer.dll
+D:\FMAPI\JobCheck\RepositeryLayer\bin\Debug\netcoreapp3.1\CommonLayer.pdb
+D:\FMAPI\JobCheck\RepositeryLayer\obj\Debug\netcoreapp3.1\RepositeryLayer.csprojAssemblyReference.cache
+D:\FMAPI\JobCheck\RepositeryLayer\obj\Debug\netcoreapp3.1\RepositeryLayer.AssemblyInfoInputs.cache
+D:\FMAPI\JobCheck\RepositeryLayer\obj\Debug\netcoreapp3.1\RepositeryLayer.AssemblyInfo.cs
+D:\FMAPI\JobCheck\RepositeryLayer\obj\Debug\netcoreapp3.1\RepositeryLayer.csproj.CoreCompileInputs.cache
+D:\FMAPI\JobCheck\RepositeryLayer\obj\Debug\netcoreapp3.1\RepositeryLayer.csproj.CopyComplete
+D:\FMAPI\JobCheck\RepositeryLayer\obj\Debug\netcoreapp3.1\RepositeryLayer.dll
+D:\FMAPI\JobCheck\RepositeryLayer\obj\Debug\netcoreapp3.1\RepositeryLayer.pdb

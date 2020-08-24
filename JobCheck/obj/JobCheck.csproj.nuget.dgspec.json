@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dell\\source\\repos\\JobCheck\\JobCheck\\JobCheck.csproj": {}
+    "D:\\FMAPI\\JobCheck\\JobCheck\\JobCheck.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dell\\source\\repos\\JobCheck\\BusinessLayer\\BusinessLayer.csproj": {
+    "D:\\FMAPI\\JobCheck\\BusinessLayer\\BusinessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dell\\source\\repos\\JobCheck\\BusinessLayer\\BusinessLayer.csproj",
+        "projectUniqueName": "D:\\FMAPI\\JobCheck\\BusinessLayer\\BusinessLayer.csproj",
         "projectName": "BusinessLayer",
-        "projectPath": "C:\\Users\\dell\\source\\repos\\JobCheck\\BusinessLayer\\BusinessLayer.csproj",
-        "packagesPath": "C:\\Users\\dell\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dell\\source\\repos\\JobCheck\\BusinessLayer\\obj\\",
+        "projectPath": "D:\\FMAPI\\JobCheck\\BusinessLayer\\BusinessLayer.csproj",
+        "packagesPath": "C:\\Users\\jit\\.nuget\\packages\\",
+        "outputPath": "D:\\FMAPI\\JobCheck\\BusinessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jit\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -27,11 +27,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\dell\\source\\repos\\JobCheck\\CommonLayer\\CommonLayer.csproj": {
-                "projectPath": "C:\\Users\\dell\\source\\repos\\JobCheck\\CommonLayer\\CommonLayer.csproj"
+              "D:\\FMAPI\\JobCheck\\CommonLayer\\CommonLayer.csproj": {
+                "projectPath": "D:\\FMAPI\\JobCheck\\CommonLayer\\CommonLayer.csproj"
               },
-              "C:\\Users\\dell\\source\\repos\\JobCheck\\RepositeryLayer\\RepositeryLayer.csproj": {
-                "projectPath": "C:\\Users\\dell\\source\\repos\\JobCheck\\RepositeryLayer\\RepositeryLayer.csproj"
+              "D:\\FMAPI\\JobCheck\\RepositeryLayer\\RepositeryLayer.csproj": {
+                "projectPath": "D:\\FMAPI\\JobCheck\\RepositeryLayer\\RepositeryLayer.csproj"
               }
             }
           }
@@ -54,32 +54,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.1.2, 3.1.2]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\dell\\source\\repos\\JobCheck\\CommonLayer\\CommonLayer.csproj": {
+    "D:\\FMAPI\\JobCheck\\CommonLayer\\CommonLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dell\\source\\repos\\JobCheck\\CommonLayer\\CommonLayer.csproj",
+        "projectUniqueName": "D:\\FMAPI\\JobCheck\\CommonLayer\\CommonLayer.csproj",
         "projectName": "CommonLayer",
-        "projectPath": "C:\\Users\\dell\\source\\repos\\JobCheck\\CommonLayer\\CommonLayer.csproj",
-        "packagesPath": "C:\\Users\\dell\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dell\\source\\repos\\JobCheck\\CommonLayer\\obj\\",
+        "projectPath": "D:\\FMAPI\\JobCheck\\CommonLayer\\CommonLayer.csproj",
+        "packagesPath": "C:\\Users\\jit\\.nuget\\packages\\",
+        "outputPath": "D:\\FMAPI\\JobCheck\\CommonLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jit\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -112,32 +106,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.1.2, 3.1.2]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\dell\\source\\repos\\JobCheck\\JobCheck\\JobCheck.csproj": {
+    "D:\\FMAPI\\JobCheck\\JobCheck\\JobCheck.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dell\\source\\repos\\JobCheck\\JobCheck\\JobCheck.csproj",
+        "projectUniqueName": "D:\\FMAPI\\JobCheck\\JobCheck\\JobCheck.csproj",
         "projectName": "JobCheck",
-        "projectPath": "C:\\Users\\dell\\source\\repos\\JobCheck\\JobCheck\\JobCheck.csproj",
-        "packagesPath": "C:\\Users\\dell\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dell\\source\\repos\\JobCheck\\JobCheck\\obj\\",
+        "projectPath": "D:\\FMAPI\\JobCheck\\JobCheck\\JobCheck.csproj",
+        "packagesPath": "C:\\Users\\jit\\.nuget\\packages\\",
+        "outputPath": "D:\\FMAPI\\JobCheck\\JobCheck\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jit\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -150,8 +138,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\dell\\source\\repos\\JobCheck\\BusinessLayer\\BusinessLayer.csproj": {
-                "projectPath": "C:\\Users\\dell\\source\\repos\\JobCheck\\BusinessLayer\\BusinessLayer.csproj"
+              "D:\\FMAPI\\JobCheck\\BusinessLayer\\BusinessLayer.csproj": {
+                "projectPath": "D:\\FMAPI\\JobCheck\\BusinessLayer\\BusinessLayer.csproj"
               }
             }
           }
@@ -180,12 +168,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.1.2, 3.1.2]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -194,21 +176,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\dell\\source\\repos\\JobCheck\\RepositeryLayer\\RepositeryLayer.csproj": {
+    "D:\\FMAPI\\JobCheck\\RepositeryLayer\\RepositeryLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dell\\source\\repos\\JobCheck\\RepositeryLayer\\RepositeryLayer.csproj",
+        "projectUniqueName": "D:\\FMAPI\\JobCheck\\RepositeryLayer\\RepositeryLayer.csproj",
         "projectName": "RepositeryLayer",
-        "projectPath": "C:\\Users\\dell\\source\\repos\\JobCheck\\RepositeryLayer\\RepositeryLayer.csproj",
-        "packagesPath": "C:\\Users\\dell\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dell\\source\\repos\\JobCheck\\RepositeryLayer\\obj\\",
+        "projectPath": "D:\\FMAPI\\JobCheck\\RepositeryLayer\\RepositeryLayer.csproj",
+        "packagesPath": "C:\\Users\\jit\\.nuget\\packages\\",
+        "outputPath": "D:\\FMAPI\\JobCheck\\RepositeryLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jit\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -221,8 +203,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\dell\\source\\repos\\JobCheck\\CommonLayer\\CommonLayer.csproj": {
-                "projectPath": "C:\\Users\\dell\\source\\repos\\JobCheck\\CommonLayer\\CommonLayer.csproj"
+              "D:\\FMAPI\\JobCheck\\CommonLayer\\CommonLayer.csproj": {
+                "projectPath": "D:\\FMAPI\\JobCheck\\CommonLayer\\CommonLayer.csproj"
               }
             }
           }
@@ -255,18 +237,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.1.2, 3.1.2]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
