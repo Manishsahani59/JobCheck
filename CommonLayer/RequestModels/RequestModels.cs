@@ -63,4 +63,14 @@ namespace CommonLayer.RequestModels
         public string DesignationCode { get; set; }
         public long UserId { get; set; }
     }
+
+    public class LoginDetails
+    {
+        public string LoginName { get; set; }
+        public string UserPassword { get; set; }
+        public string UserType { get; set; }
+        public string SKey { get; set; }
+
+
+    }
 }

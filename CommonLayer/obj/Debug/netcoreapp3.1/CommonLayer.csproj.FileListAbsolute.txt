@@ -10,9 +10,9 @@ C:\Users\dell\source\repos\JobCheck\CommonLayer\obj\Debug\netcoreapp3.1\CommonLa
 D:\FMAPI\JobCheck\CommonLayer\bin\Debug\netcoreapp3.1\CommonLayer.deps.json
 D:\FMAPI\JobCheck\CommonLayer\bin\Debug\netcoreapp3.1\CommonLayer.dll
 D:\FMAPI\JobCheck\CommonLayer\bin\Debug\netcoreapp3.1\CommonLayer.pdb
-D:\FMAPI\JobCheck\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.csprojAssemblyReference.cache
 D:\FMAPI\JobCheck\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.AssemblyInfoInputs.cache
 D:\FMAPI\JobCheck\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.AssemblyInfo.cs
 D:\FMAPI\JobCheck\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.csproj.CoreCompileInputs.cache
 D:\FMAPI\JobCheck\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.dll
 D:\FMAPI\JobCheck\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.pdb
+D:\FMAPI\JobCheck\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.csprojAssemblyReference.cache

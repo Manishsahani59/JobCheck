@@ -137,4 +137,32 @@ namespace CommonLayer.ResponseModels
     }
 
 
+    public class GetLoginDetailsResponseMOdel
+    {
+
+
+
+        public int UserId { get; set; }
+        public string UserFirstName { get; set; }
+        public string UserMiddleName { get; set; }
+        public string UserLastName { get; set; }
+        public string LoginName { get; set; }
+        public string UserPassword { get; set; }
+        public string EmailId { get; set; }
+        public string MobileNo { get; set; }
+
+        public string RoleId { get; set; }
+        public string IsActive { get; set; }
+        public string CreatedDate { get; set; }
+        public string CreatedBy { get; set; }
+        public string UpdatedDate { get; set; }
+        public string UpdatedBy { get; set; }
+        public string DeletedDate { get; set; }
+        public string DeletedBy { get; set; }
+
+        public string Errormsg { get; set; }
+
+    }
+
+
 }
