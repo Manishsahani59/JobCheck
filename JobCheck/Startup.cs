@@ -38,6 +38,9 @@ namespace JobCheck
             services.AddTransient<ILoginBusinessLayer, LoginBusinessLayer>();
             services.AddTransient<ILoginRepositeryLayer, LoginRepositeryLayer>();
 
+            services.AddTransient<ICandidateBusinessLayer, CandidateBusinessLayer>();
+            services.AddTransient<ICandidateRepositeryLayer, CandidateRepositeryLayer>();
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

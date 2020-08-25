@@ -73,4 +73,43 @@ namespace CommonLayer.RequestModels
 
 
     }
+
+
+    public class ReqCandidatePersonalDetails
+    {
+        public string ActionType { get; set; }
+
+        public long CandidateId { get; set; }
+
+        public string CandidateName { get; set; }
+        public string FirstName { get; set; }
+        public string MiddleName { get; set; }
+        public string LastName { get; set; }
+
+        public string DateOfBirth { get; set; }
+        public string Gender { get; set; }
+        public string MartialStatus { get; set; }
+        public string MobileNo { get; set; }
+
+
+        public string LandLineNo { get; set; }
+        public string AlterNameNo { get; set; }
+        public string EmailId { get; set; }
+        public string AadharCardNumber { get; set; }
+
+
+        public string PANNumber { get; set; }
+        public string CreatedBy { get; set; }
+       
+        public string IsActive { get; set; }
+        public string UserId { get; set; }
+
+        public string LoginName { get; set; }
+        public string UserPassword { get; set; }
+
+        public string UserType { get; set; }
+
+        public string RoleId { get; set; }
+
+    }
 }
