@@ -38,6 +38,12 @@ C:\Users\dell\source\repos\JobCheck\JobCheck\obj\Debug\netcoreapp3.1\JobCheck.cs
 C:\Users\dell\source\repos\JobCheck\JobCheck\obj\Debug\netcoreapp3.1\JobCheck.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\dell\source\repos\JobCheck\JobCheck\obj\Debug\netcoreapp3.1\JobCheck.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\dell\source\repos\JobCheck\JobCheck\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+D:\FMAPI\JobCheck\JobCheck\obj\Debug\netcoreapp3.1\JobCheck.csprojAssemblyReference.cache
+D:\FMAPI\JobCheck\JobCheck\obj\Debug\netcoreapp3.1\JobCheck.AssemblyInfoInputs.cache
+D:\FMAPI\JobCheck\JobCheck\obj\Debug\netcoreapp3.1\JobCheck.AssemblyInfo.cs
+D:\FMAPI\JobCheck\JobCheck\obj\Debug\netcoreapp3.1\JobCheck.csproj.CoreCompileInputs.cache
+D:\FMAPI\JobCheck\JobCheck\obj\Debug\netcoreapp3.1\JobCheck.MvcApplicationPartsAssemblyInfo.cs
+D:\FMAPI\JobCheck\JobCheck\obj\Debug\netcoreapp3.1\JobCheck.MvcApplicationPartsAssemblyInfo.cache
 D:\FMAPI\JobCheck\JobCheck\bin\Debug\netcoreapp3.1\appsettings.Development.json
 D:\FMAPI\JobCheck\JobCheck\bin\Debug\netcoreapp3.1\appsettings.json
 D:\FMAPI\JobCheck\JobCheck\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
@@ -65,12 +71,6 @@ D:\FMAPI\JobCheck\JobCheck\bin\Debug\netcoreapp3.1\RepositeryLayer.dll
 D:\FMAPI\JobCheck\JobCheck\bin\Debug\netcoreapp3.1\BusinessLayer.pdb
 D:\FMAPI\JobCheck\JobCheck\bin\Debug\netcoreapp3.1\CommonLayer.pdb
 D:\FMAPI\JobCheck\JobCheck\bin\Debug\netcoreapp3.1\RepositeryLayer.pdb
-D:\FMAPI\JobCheck\JobCheck\obj\Debug\netcoreapp3.1\JobCheck.csprojAssemblyReference.cache
-D:\FMAPI\JobCheck\JobCheck\obj\Debug\netcoreapp3.1\JobCheck.AssemblyInfoInputs.cache
-D:\FMAPI\JobCheck\JobCheck\obj\Debug\netcoreapp3.1\JobCheck.AssemblyInfo.cs
-D:\FMAPI\JobCheck\JobCheck\obj\Debug\netcoreapp3.1\JobCheck.csproj.CoreCompileInputs.cache
-D:\FMAPI\JobCheck\JobCheck\obj\Debug\netcoreapp3.1\JobCheck.MvcApplicationPartsAssemblyInfo.cs
-D:\FMAPI\JobCheck\JobCheck\obj\Debug\netcoreapp3.1\JobCheck.MvcApplicationPartsAssemblyInfo.cache
 D:\FMAPI\JobCheck\JobCheck\obj\Debug\netcoreapp3.1\JobCheck.RazorTargetAssemblyInfo.cache
 D:\FMAPI\JobCheck\JobCheck\obj\Debug\netcoreapp3.1\JobCheck.csproj.CopyComplete
 D:\FMAPI\JobCheck\JobCheck\obj\Debug\netcoreapp3.1\staticwebassets\JobCheck.StaticWebAssets.Manifest.cache

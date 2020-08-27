@@ -10,7 +10,7 @@ namespace RepositeryLayer.Interfaces
    public interface ILoginRepositeryLayer
     {
        
-        Task<List<GetLoginDetailsResponseMOdel>> GetLoginList(String LoginName, String UserPassword, String UserType);
+        Task<GetLoginDetailsResponseMOdel> GetLoginList(String LoginName, String UserPassword, String UserType);
         
 
     }

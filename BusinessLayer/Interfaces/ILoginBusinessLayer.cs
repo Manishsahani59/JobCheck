@@ -10,7 +10,7 @@ namespace BusinessLayer.Interfaces
     public interface ILoginBusinessLayer
     {
                
-        Task<List<GetLoginDetailsResponseMOdel>> GetLoginList(String LoginName, String UserPassword, String UserType);
+        Task<GetLoginDetailsResponseMOdel> GetLoginList(String LoginName, String UserPassword, String UserType);
        
         
     }

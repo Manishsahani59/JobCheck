@@ -5,6 +5,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using BusinessLayer.Interfaces;
 using CommonLayer.RequestModels;
+using CommonLayer.CandidateRequestModel;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using RepositeryLayer.Services;
@@ -35,6 +36,40 @@ namespace JobCheck.Controllers
             try
             {
                 var Message = CandidateBusinessLayer.InsertUpdateDeleteCandidatePersonalDetails(sCandidatePersonalDetails);
+                return Ok(new { Message });
+            }
+            catch (Exception e)
+            {
+                throw new ApplicationException(e.Message);
+            }
+        }
+
+        [HttpPost]
+        [Route("Candidate_InsertUpdateDeleteContactDetails")]
+        public IActionResult Candidate_InsertUpdateDeleteContactDetails([FromBody] ReqCandidateContactDetails sReqCandidateContactDetails)
+        {
+
+            try
+            {
+                var Message = CandidateBusinessLayer.InsertUpdateDeleteCandidateContactDetails(sReqCandidateContactDetails);
+                return Ok(new { Message });
+            }
+            catch (Exception e)
+            {
+                throw new ApplicationException(e.Message);
+            }
+        }
+
+
+        [HttpPost]
+        [Route("Candidate_InsertUpdateDeleteWorkExpDetails")]
+        public IActionResult Candidate_InsertUpdateDeleteWorkExpDetails([FromBody] ReqCandidateWorkExperienceDetails sReqCandidateWorkExperienceDetails)
+        {
+
+
+            try
+            {
+                var Message = CandidateBusinessLayer.InsertUpdateDeleteCandidateWorkExperience(sReqCandidateWorkExperienceDetails);
                 return Ok(new { Message });
             }
             catch (Exception e)

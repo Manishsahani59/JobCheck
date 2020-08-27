@@ -28,11 +28,12 @@ namespace RepositeryLayer.Services
      
        
 
-        public async Task<List<GetLoginDetailsResponseMOdel>>GetLoginList(String LoginName, String UserPassword, String UserType)
+        public async Task<GetLoginDetailsResponseMOdel> GetLoginList(String LoginName, String UserPassword, String UserType)
         {
             try
             {
-                List<GetLoginDetailsResponseMOdel> LoginDetails = new List<GetLoginDetailsResponseMOdel>();
+                GetLoginDetailsResponseMOdel myLoginDetails = new GetLoginDetailsResponseMOdel();
+                //// List<GetLoginDetailsResponseMOdel> LoginDetails = new List<GetLoginDetailsResponseMOdel>();
                 DataTable dt = new DataTable();
                 await using(SqlConnection connection = new SqlConnection(_configuration["ConnectionString:DigiJobCheck"]))
                 {
@@ -51,7 +52,7 @@ namespace RepositeryLayer.Services
                     if (dt.Rows.Count > 0)
                     {
                         string sMess = Convert.ToString(dt.Rows[0]["Errormsg"]);
-                        GetLoginDetailsResponseMOdel myLoginDetails = new GetLoginDetailsResponseMOdel();
+                       
                         if (!string.IsNullOrEmpty(sMess) && sMess.ToLower().Contains("login successful"))
                         {
 
@@ -77,7 +78,7 @@ namespace RepositeryLayer.Services
                         {
                             myLoginDetails.Errormsg = Convert.ToString(dt.Rows[0]["Errormsg"]);
                         }
-                        LoginDetails.Add(myLoginDetails);
+                       // LoginDetails.Add(myLoginDetails);
 
                         if (connection != null) { connection.Close(); }
                         command.Dispose();
@@ -88,7 +89,7 @@ namespace RepositeryLayer.Services
 
                    
                 }
-                return (LoginDetails != null && LoginDetails.Count != 0) ? LoginDetails : null;
+                return (myLoginDetails != null ) ? myLoginDetails : null;
 
             }
             catch (Exception ex)

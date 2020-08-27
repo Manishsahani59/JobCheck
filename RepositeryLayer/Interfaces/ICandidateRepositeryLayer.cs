@@ -1,9 +1,13 @@
 ﻿using CommonLayer.RequestModels;
-using CommonLayer.ResponseModels;
+
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+
+
+using CommonLayer.CandidateRequestModel;
+
 
 namespace RepositeryLayer.Interfaces
 {
@@ -12,5 +16,8 @@ namespace RepositeryLayer.Interfaces
              
 
         string InsertUpdateDeleteCandidatePD(ReqCandidatePersonalDetails sCandidatePersonalDetails);
+        string InsertUpdateDeleteCandidateContactDetails(ReqCandidateContactDetails sReqCandidateContactDetails);
+        string InsertUpdateDeleteCandidateWorkExperience(ReqCandidateWorkExperienceDetails sReqCandidateWorkExperienceDetails);
+
     }
 }

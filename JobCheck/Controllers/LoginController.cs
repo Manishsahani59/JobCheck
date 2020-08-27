@@ -9,6 +9,11 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using RepositeryLayer.Services;
 
+using System.Net;
+
+using System.Text;
+
+
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace JobCheck.Controllers
@@ -34,6 +39,8 @@ namespace JobCheck.Controllers
             {
                 var Message = LoginBusinessLayer.GetLoginList(sLogin.LoginName, sLogin.UserPassword, sLogin.UserType);
                 return Ok(new { Message });
+                /// 
+               
             }
             catch (Exception e)
             {

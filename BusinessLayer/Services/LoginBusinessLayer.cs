@@ -19,12 +19,12 @@ namespace BusinessLayer.Services
             LoginRepositeryLayer = di_LoginRepsoiteryLayer;
         }
         
-        public async Task<List<GetLoginDetailsResponseMOdel>> GetLoginList(String LoginName, String UserPassword, String UserType)
+        public async Task<GetLoginDetailsResponseMOdel> GetLoginList(String LoginName, String UserPassword, String UserType)
         {
             try
             {
                 var GetLogingDetails= await LoginRepositeryLayer.GetLoginList(LoginName, UserPassword, UserType);
-                if (GetLogingDetails != null && GetLogingDetails.Count != 0)
+                if (GetLogingDetails != null )
                 {
                     return GetLogingDetails;
                 }
