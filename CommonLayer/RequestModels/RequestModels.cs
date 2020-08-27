@@ -73,6 +73,23 @@ namespace CommonLayer.RequestModels
 
 
     }
+    public class SkillTypeRequestModel
+    {
+        public string ActionType { get; set; }
+        public long SkillTypeId { get; set; }
+        public string SkillTypeName { get; set; }
+        public string SkillTypeCode { get; set; }
+        public long UserId { get; set; }
+    }
+
+    public class JobTypeRequestModel
+    {
+        public string ActionType { get; set; }
+        public long JobTypeId { get; set; }
+        public string JobTypeName { get; set; }
+        public string JobTypeCode { get; set; }
+        public long UserId { get; set; }
+    }
 
 
     public class ReqCandidatePersonalDetails
@@ -112,4 +129,6 @@ namespace CommonLayer.RequestModels
         public string RoleId { get; set; }
 
     }
+
+   
 }

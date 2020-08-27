@@ -195,7 +195,7 @@ namespace RepositeryLayer.Services
                         CreatedOn=sdr["CreatedOn"].ToString(),
                         UpdatedBy=sdr["UpdatedBy"].ToString(),
                         UpdatedOn=sdr["UpdatedOn"].ToString(),
-                        IsActive=Convert.ToChar(sdr["IsActive"]),
+                        IsActive=Convert.ToBoolean(sdr["IsActive"]),
                     };
                     GetSkillTypeList.Add(GetSkill);
                 }
@@ -618,7 +618,66 @@ namespace RepositeryLayer.Services
             }
         }
 
-      
+        public string InsertUpdateDeleteSkillType(SkillTypeRequestModel SkillTypeInfo)
+        {
+            try
+            {
+                SqlConnection sqlConnection = new SqlConnection(_configuration["ConnectionString:DigiJobCheck"]);
+                SqlCommand sqlCommand = new SqlCommand("[usp_InsertUpdateDeleteSkillType]", sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("@varType", SkillTypeInfo.ActionType);
+                sqlCommand.Parameters.AddWithValue("@intSkillTypeId", SkillTypeInfo.SkillTypeId);
+                sqlCommand.Parameters.AddWithValue("@varSkillTypeName", SkillTypeInfo.SkillTypeName);
+                sqlCommand.Parameters.AddWithValue("@varSkillCode", SkillTypeInfo.SkillTypeCode);
+                sqlCommand.Parameters.AddWithValue("@intUserId", SkillTypeInfo.UserId);
+                sqlConnection.Open();
+                var sdr = sqlCommand.ExecuteReader();
+                if (sdr.HasRows)
+                {
+                    while (sdr.Read())
+                    {
+                        message = sdr["Message"].ToString();
+                    }
+                }
+                sdr.Close();
+                return message;
+            }
+            catch (Exception e)
+            {
 
+                throw new ApplicationException(e.Message);
+            }
+        }
+
+        public string InsertUpdateDeleteJobType(JobTypeRequestModel JobTypeInfo)
+        {
+            try
+            {
+                SqlConnection sqlConnection = new SqlConnection(_configuration["ConnectionString:DigiJobCheck"]);
+                SqlCommand sqlCommand = new SqlCommand("[usp_InsertUpdateDeleteJobType]", sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("@varType", JobTypeInfo.ActionType);
+                sqlCommand.Parameters.AddWithValue("@intJobTypeId", JobTypeInfo.JobTypeId);
+                sqlCommand.Parameters.AddWithValue("@varJobTypeName", JobTypeInfo.JobTypeName);
+                sqlCommand.Parameters.AddWithValue("@varJobCode", JobTypeInfo.JobTypeCode);
+                sqlCommand.Parameters.AddWithValue("@intUserId", JobTypeInfo.UserId);
+                sqlConnection.Open();
+                var sdr = sqlCommand.ExecuteReader();
+                if (sdr.HasRows)
+                {
+                    while (sdr.Read())
+                    {
+                        message = sdr["Message"].ToString();
+                    }
+                }
+                sdr.Close();
+                return message;
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }        }
     }
 }

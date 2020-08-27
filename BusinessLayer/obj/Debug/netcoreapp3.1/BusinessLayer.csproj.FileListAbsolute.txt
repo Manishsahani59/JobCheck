@@ -26,3 +26,17 @@ D:\FMAPI\JobCheck\BusinessLayer\obj\Debug\netcoreapp3.1\BusinessLayer.csproj.Cor
 D:\FMAPI\JobCheck\BusinessLayer\obj\Debug\netcoreapp3.1\BusinessLayer.csproj.CopyComplete
 D:\FMAPI\JobCheck\BusinessLayer\obj\Debug\netcoreapp3.1\BusinessLayer.dll
 D:\FMAPI\JobCheck\BusinessLayer\obj\Debug\netcoreapp3.1\BusinessLayer.pdb
+G:\myProject\JobCheck\BusinessLayer\bin\Debug\netcoreapp3.1\BusinessLayer.deps.json
+G:\myProject\JobCheck\BusinessLayer\bin\Debug\netcoreapp3.1\BusinessLayer.dll
+G:\myProject\JobCheck\BusinessLayer\bin\Debug\netcoreapp3.1\BusinessLayer.pdb
+G:\myProject\JobCheck\BusinessLayer\bin\Debug\netcoreapp3.1\CommonLayer.dll
+G:\myProject\JobCheck\BusinessLayer\bin\Debug\netcoreapp3.1\RepositeryLayer.dll
+G:\myProject\JobCheck\BusinessLayer\bin\Debug\netcoreapp3.1\CommonLayer.pdb
+G:\myProject\JobCheck\BusinessLayer\bin\Debug\netcoreapp3.1\RepositeryLayer.pdb
+G:\myProject\JobCheck\BusinessLayer\obj\Debug\netcoreapp3.1\BusinessLayer.csprojAssemblyReference.cache
+G:\myProject\JobCheck\BusinessLayer\obj\Debug\netcoreapp3.1\BusinessLayer.AssemblyInfoInputs.cache
+G:\myProject\JobCheck\BusinessLayer\obj\Debug\netcoreapp3.1\BusinessLayer.AssemblyInfo.cs
+G:\myProject\JobCheck\BusinessLayer\obj\Debug\netcoreapp3.1\BusinessLayer.csproj.CoreCompileInputs.cache
+G:\myProject\JobCheck\BusinessLayer\obj\Debug\netcoreapp3.1\BusinessLayer.csproj.CopyComplete
+G:\myProject\JobCheck\BusinessLayer\obj\Debug\netcoreapp3.1\BusinessLayer.dll
+G:\myProject\JobCheck\BusinessLayer\obj\Debug\netcoreapp3.1\BusinessLayer.pdb

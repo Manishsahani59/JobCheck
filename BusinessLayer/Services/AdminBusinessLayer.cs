@@ -310,5 +310,33 @@ namespace BusinessLayer.Services
 
 
         }
+
+        public string InsertUpdateDeleteSkillType(SkillTypeRequestModel SkillTypeInfo)
+        {
+            try
+            {
+                var Message = AdminRepositeryLayer.InsertUpdateDeleteSkillType(SkillTypeInfo);
+                return Message;
+            }
+            catch (Exception e)
+            {
+
+                throw new ApplicationException(e.Message);
+            }
+        }
+
+        public string InsertUpdateDeleteJobType(JobTypeRequestModel JobTypeInfo)
+        {
+            try
+            {
+                var Message = AdminRepositeryLayer.InsertUpdateDeleteJobType(JobTypeInfo);
+                return Message;
+            }
+            catch (Exception e)
+            {
+
+                throw new ApplicationException(e.Message);
+            }
+        }
     }
 }

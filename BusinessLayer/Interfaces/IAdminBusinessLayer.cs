@@ -28,6 +28,10 @@ namespace BusinessLayer.Interfaces
         string InsertUpdateDeleteQualificationType(QualificationRequestModel QualificationInfo);
         string InsertUpdateDeleteDesignation(DesignationRequestModel DesignationInfo);
         string InsertUpdateDeleteState(StateRequestModel StateInfo);
+        string InsertUpdateDeleteSkillType(SkillTypeRequestModel SkillTypeInfo);
+
+        string InsertUpdateDeleteJobType(JobTypeRequestModel JobTypeInfo);
+
 
     }
 

@@ -15,3 +15,12 @@ D:\FMAPI\JobCheck\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.AssemblyInfo.c
 D:\FMAPI\JobCheck\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.csproj.CoreCompileInputs.cache
 D:\FMAPI\JobCheck\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.dll
 D:\FMAPI\JobCheck\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.pdb
+G:\myProject\JobCheck\CommonLayer\bin\Debug\netcoreapp3.1\CommonLayer.deps.json
+G:\myProject\JobCheck\CommonLayer\bin\Debug\netcoreapp3.1\CommonLayer.dll
+G:\myProject\JobCheck\CommonLayer\bin\Debug\netcoreapp3.1\CommonLayer.pdb
+G:\myProject\JobCheck\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.csprojAssemblyReference.cache
+G:\myProject\JobCheck\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.AssemblyInfoInputs.cache
+G:\myProject\JobCheck\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.AssemblyInfo.cs
+G:\myProject\JobCheck\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.csproj.CoreCompileInputs.cache
+G:\myProject\JobCheck\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.dll
+G:\myProject\JobCheck\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.pdb

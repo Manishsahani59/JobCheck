@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "NHDeCcbHJ4zz2wn7wLgKxWt9PJrYoKdt1D5KH+9rXfmVxM3iIU4SmKzUbT8CeqcvvcCKwmVlPNKtAkIAq2nArA==",
+  "dgSpecHash": "H4bplhzLAV1TcRCToXAkin4I/x5q2KEfXVN3LR44CSnJeUIzmgrZMQeYOC9g391gvTkyipbiKaNG3an4Y0OOvA==",
   "success": true,
-  "projectFilePath": "D:\\FMAPI\\JobCheck\\CommonLayer\\CommonLayer.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "G:\\myProject\\JobCheck\\CommonLayer\\CommonLayer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\dell\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+  ],
   "logs": []
 }

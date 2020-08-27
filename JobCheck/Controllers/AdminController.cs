@@ -121,6 +121,38 @@ namespace JobCheck.Controllers
             }
         }
 
+        [HttpPost]
+        [Route("SkillType_InsertUpdateDelete")]
+        public IActionResult InsertUpadteDeleteSkillType([FromBody] SkillTypeRequestModel SkillTypeInfo)
+        {
+            try
+            {
+                var Message = AdminBusinesslayer.InsertUpdateDeleteSkillType(SkillTypeInfo);
+                return Ok(new { Message });
+            }
+            catch (Exception e)
+            {
+
+                throw new ApplicationException(e.Message);
+            }
+        }
+
+        [HttpPost]
+        [Route("JObType_InsertUpdateDelete")]
+        public IActionResult InsertUpadteDeleteJobType([FromBody] JobTypeRequestModel JobTypeInfo)
+        {
+            try
+            {
+                var Message = AdminBusinesslayer.InsertUpdateDeleteJobType(JobTypeInfo);
+                return Ok(new { Message });
+            }
+            catch (Exception e)
+            {
+
+                throw new ApplicationException(e.Message);
+            }
+        }
+
         [HttpGet]
         [Route("GETIndustryType")]
         public async Task<IActionResult> GETIndustryType()

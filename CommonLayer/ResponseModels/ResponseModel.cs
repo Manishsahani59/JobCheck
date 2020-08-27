@@ -7,7 +7,7 @@ using System.Text;
 
 namespace CommonLayer.ResponseModels
 {
-    public class GETIndustryTypeResppnseModel
+      public class GETIndustryTypeResppnseModel
         {
             public string IndustryType { get; set; }
         }
@@ -73,7 +73,7 @@ namespace CommonLayer.ResponseModels
         public string CreatedOn { get; set; }
         public string UpdatedBy { get; set; }
         public string UpdatedOn { get; set; }
-        public char IsActive { get; set; }
+        public bool IsActive { get; set; }
     }
     public class GetLocationsListResponseModel
     {
@@ -162,6 +162,12 @@ namespace CommonLayer.ResponseModels
 
         public string Errormsg { get; set; }
 
+    }
+
+  
+
+    public class GetJobTypeResponseModel { 
+            
     }
 
 

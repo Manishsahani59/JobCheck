@@ -22,3 +22,15 @@ D:\FMAPI\JobCheck\RepositeryLayer\obj\Debug\netcoreapp3.1\RepositeryLayer.csproj
 D:\FMAPI\JobCheck\RepositeryLayer\obj\Debug\netcoreapp3.1\RepositeryLayer.csproj.CopyComplete
 D:\FMAPI\JobCheck\RepositeryLayer\obj\Debug\netcoreapp3.1\RepositeryLayer.dll
 D:\FMAPI\JobCheck\RepositeryLayer\obj\Debug\netcoreapp3.1\RepositeryLayer.pdb
+G:\myProject\JobCheck\RepositeryLayer\bin\Debug\netcoreapp3.1\RepositeryLayer.deps.json
+G:\myProject\JobCheck\RepositeryLayer\bin\Debug\netcoreapp3.1\RepositeryLayer.dll
+G:\myProject\JobCheck\RepositeryLayer\bin\Debug\netcoreapp3.1\RepositeryLayer.pdb
+G:\myProject\JobCheck\RepositeryLayer\bin\Debug\netcoreapp3.1\CommonLayer.dll
+G:\myProject\JobCheck\RepositeryLayer\bin\Debug\netcoreapp3.1\CommonLayer.pdb
+G:\myProject\JobCheck\RepositeryLayer\obj\Debug\netcoreapp3.1\RepositeryLayer.csprojAssemblyReference.cache
+G:\myProject\JobCheck\RepositeryLayer\obj\Debug\netcoreapp3.1\RepositeryLayer.AssemblyInfoInputs.cache
+G:\myProject\JobCheck\RepositeryLayer\obj\Debug\netcoreapp3.1\RepositeryLayer.AssemblyInfo.cs
+G:\myProject\JobCheck\RepositeryLayer\obj\Debug\netcoreapp3.1\RepositeryLayer.csproj.CoreCompileInputs.cache
+G:\myProject\JobCheck\RepositeryLayer\obj\Debug\netcoreapp3.1\RepositeryLayer.csproj.CopyComplete
+G:\myProject\JobCheck\RepositeryLayer\obj\Debug\netcoreapp3.1\RepositeryLayer.dll
+G:\myProject\JobCheck\RepositeryLayer\obj\Debug\netcoreapp3.1\RepositeryLayer.pdb
