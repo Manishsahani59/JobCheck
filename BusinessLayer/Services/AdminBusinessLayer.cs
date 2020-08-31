@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Services
 {
-    public class AdminBusinessLayer : IAdminBusinessLayer
+    public class AdminBusinessLayer : IAdminBusinessLayer 
     {
         IAdminRepositeryLayer AdminRepositeryLayer;
         public AdminBusinessLayer(IAdminRepositeryLayer di_AdminRepsoiteryLayer)
@@ -336,6 +336,46 @@ namespace BusinessLayer.Services
             {
 
                 throw new ApplicationException(e.Message);
+            }
+        }
+
+        public string InsertUpdateDeleteCourseType(CourseTypeRequestModel CourseTypeInfo) {
+            try
+            {
+                var Message = AdminRepositeryLayer.InsertUpdateDeleteCourseType(CourseTypeInfo);
+                return Message;
+            }
+            catch (Exception e)
+            {
+
+                throw new ApplicationException(e.Message);
+            }
+        }
+
+        public async Task<List<CourseTypeResponseModel>> GetCourseType(int CourseTypeId,int UserId)
+        {
+            var CourseType = await AdminRepositeryLayer.GetCourseType(CourseTypeId, UserId);
+            if (CourseType != null && CourseType.Count != 0)
+            {
+                return CourseType;
+            }
+            else
+            {
+                return null;
+            }
+
+        }
+
+        public async Task<List<JobTypeResponseModel>> GetJobType(int JobTypeId, int UserId)
+        {
+            var JobType = await AdminRepositeryLayer.GetJobType(JobTypeId, UserId);
+            if (JobType != null && JobType.Count != 0)
+            {
+                return JobType;
+            }
+            else
+            {
+                return null;
             }
         }
     }

@@ -57,7 +57,7 @@ namespace CommonLayer.ResponseModels
         {
             public int IndustryTypeId { get; set; }
             public string IndustryTypeName { get; set; }
-            public int IndustryTypeCode { get; set; }
+            public string IndustryTypeCode { get; set; }
             public string CreatedBy { get; set; }
             public string CreatedOn { get; set; }
             public string UpdatedBy { get; set; }
@@ -69,6 +69,8 @@ namespace CommonLayer.ResponseModels
     {
         public int SkillTypeId { get; set; }
         public string SkillTypeName { get; set; }
+
+      //  public string SkillTypeCode { get; set; }
         public string CreatedBy { get; set; }
         public string CreatedOn { get; set; }
         public string UpdatedBy { get; set; }
@@ -89,6 +91,31 @@ namespace CommonLayer.ResponseModels
         public string UpdatedBy { get; set; }
         public string UpdatedOn { get; set; }
         public char IsActive { get; set; }
+    }
+
+    public class CourseTypeResponseModel { 
+        public long CoursTypeId { get; set; }
+        public string CoursTypeName { get; set; }
+        public string CoursTypeCode { get; set; }
+        public string CreatedBy { get; set; }
+        public string CreatedOn { get; set; }
+        public string UpdatedBy { get; set; }
+        public string UpdatedOn { get; set; }
+        public bool IsActive { get; set; }
+
+
+    }
+
+    public class JobTypeResponseModel
+    {
+        public long JobTypeId { get; set; }
+        public string JobTypeName { get; set; }
+        public string JobTypeCode { get; set; }
+        public string CreatedBy { get; set; }
+        public string CreatedOn { get; set; }
+        public string UpdatedBy { get; set; }
+        public string UpdatedOn { get; set; }
+        public bool IsActive { get; set; }
     }
 
     public class GetQualificationTypeList {

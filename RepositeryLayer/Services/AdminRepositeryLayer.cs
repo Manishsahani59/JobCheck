@@ -156,7 +156,7 @@ namespace RepositeryLayer.Services
                     GetIndustryListResponseModel GetIndustry = new GetIndustryListResponseModel();
                     GetIndustry.IndustryTypeId = Convert.ToInt32(sdr["IndustryTypeId"]);
                     GetIndustry.IndustryTypeName = sdr["IndustryTypeName"].ToString();
-                    GetIndustry.IndustryTypeCode = Convert.ToInt32(sdr["IndustryTypeCode"]);
+                    GetIndustry.IndustryTypeCode = sdr["IndustryTypeCode"].ToString();
                     GetIndustry.CreatedBy = sdr["CreatedBy"].ToString();
                     GetIndustry.CreatedOn = sdr["CreatedOn"].ToString();
                     GetIndustry.UpdatedBy= sdr["UpdatedBy"].ToString();
@@ -191,6 +191,7 @@ namespace RepositeryLayer.Services
                     {
                         SkillTypeId = Convert.ToInt32(sdr["SkillTypeId"]),
                         SkillTypeName=sdr["SkillTypeName"].ToString(),
+                       // SkillTypeCode=sdr["SkillTypeCode"].ToString(),
                         CreatedBy=sdr["CreatedBy"].ToString(),
                         CreatedOn=sdr["CreatedOn"].ToString(),
                         UpdatedBy=sdr["UpdatedBy"].ToString(),
@@ -674,10 +675,118 @@ namespace RepositeryLayer.Services
                 return message;
 
             }
-            catch (Exception)
+            catch (Exception e)
             {
 
-                throw;
-            }        }
+                throw new ApplicationException(e.Message);
+            }  
+        }
+
+
+        public string InsertUpdateDeleteCourseType(CourseTypeRequestModel CourseTypeInfo)
+        {
+            try
+            {
+                SqlConnection sqlConnection = new SqlConnection(_configuration["ConnectionString:DigiJobCheck"]);
+                SqlCommand sqlCommand = new SqlCommand("[usp_InsertUpdateDeleteCoursType]", sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("@varType", CourseTypeInfo.ActionType);
+                sqlCommand.Parameters.AddWithValue("@intCoursTypeId", CourseTypeInfo.CourseTypeId);
+                sqlCommand.Parameters.AddWithValue("@varCoursTypeName", CourseTypeInfo.CourseTypeName);
+                sqlCommand.Parameters.AddWithValue("@varCoursCode", CourseTypeInfo.CourseTypeCode);
+                sqlCommand.Parameters.AddWithValue("@intUserId", CourseTypeInfo.UserId);
+                sqlConnection.Open();
+                var sdr = sqlCommand.ExecuteReader();
+                if (sdr.HasRows)
+                {
+                    while (sdr.Read())
+                    {
+                        message = sdr["Message"].ToString();
+                    }
+                }
+                sdr.Close();
+                return message;
+
+            }
+            catch (Exception e)
+            {
+
+                throw new ApplicationException(e.Message);
+            }
+        }
+
+        public async Task<List<CourseTypeResponseModel>> GetCourseType(int CourseTypeId, int UserId)
+        {
+            try
+            {
+                List<CourseTypeResponseModel> GetCourseTypelist = new List<CourseTypeResponseModel>();
+                SqlConnection sqlConnection = new SqlConnection(_configuration["ConnectionString:DigiJobCheck"]);
+                SqlCommand sqlCommand = new SqlCommand("[usp_GetCourseTypeList]", sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("@intCourseTypeId", CourseTypeId);
+                sqlCommand.Parameters.AddWithValue("@intUserId", UserId);
+                await sqlConnection.OpenAsync();
+                SqlDataReader sdr = sqlCommand.ExecuteReader();
+                while (sdr.Read())
+                {
+                    CourseTypeResponseModel GetCourseType = new CourseTypeResponseModel()
+                    {
+                        CoursTypeId = Convert.ToInt32(sdr["CoursTypeId"]),
+                        CoursTypeName = sdr["CoursTypeName"].ToString(),
+                        CoursTypeCode = sdr["CoursCode"].ToString(),
+                        CreatedBy = sdr["CreatedBy"].ToString(),
+                        CreatedOn = sdr["CreatedOn"].ToString(),
+                        UpdatedBy = sdr["UpdatedBy"].ToString(),
+                        UpdatedOn = sdr["UpdatedOn"].ToString(),
+                        IsActive = Convert.ToBoolean(sdr["IsActive"]),
+                    };
+                    GetCourseTypelist.Add(GetCourseType);
+                }
+                sdr.Close();
+                return (GetCourseTypelist != null && GetCourseTypelist.Count != 0) ? GetCourseTypelist : null;
+            }
+            catch (Exception e)
+            {
+
+                throw new ApplicationException(e.Message);
+            }
+        }
+
+        public async Task<List<JobTypeResponseModel>> GetJobType(int JobTypeId, int UserId)
+        {
+            try
+            {
+                List<JobTypeResponseModel> GetJobTypelist = new List<JobTypeResponseModel>();
+                SqlConnection sqlConnection = new SqlConnection(_configuration["ConnectionString:DigiJobCheck"]);
+                SqlCommand sqlCommand = new SqlCommand("[usp_GetJobTypeList]", sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("@intJobTypeId", JobTypeId);
+                sqlCommand.Parameters.AddWithValue("@intUserId", UserId);
+                await sqlConnection.OpenAsync();
+                SqlDataReader sdr = sqlCommand.ExecuteReader();
+                while (sdr.Read())
+                {
+                    JobTypeResponseModel GetJobType = new JobTypeResponseModel()
+                    {
+                        JobTypeId = Convert.ToInt32(sdr["JobTypeId"]),
+                        JobTypeName= sdr["JobTypeName"].ToString(),
+                        JobTypeCode = sdr["JobCode"].ToString(),
+                        CreatedBy = sdr["CreatedBy"].ToString(),
+                        CreatedOn = sdr["CreatedOn"].ToString(),
+                        UpdatedBy = sdr["UpdatedBy"].ToString(),
+                        UpdatedOn = sdr["UpdatedOn"].ToString(),
+                        IsActive = Convert.ToBoolean(sdr["IsActive"]),
+                    };
+                    GetJobTypelist.Add(GetJobType);
+                }
+                sdr.Close();
+                return (GetJobTypelist != null && GetJobTypelist.Count != 0) ? GetJobTypelist : null;
+            }
+            catch (Exception e)
+            {
+
+                throw new ApplicationException(e.Message);
+            }
+        }
     }
 }

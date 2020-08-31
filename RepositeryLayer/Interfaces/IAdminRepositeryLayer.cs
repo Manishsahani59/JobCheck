@@ -19,7 +19,8 @@ namespace RepositeryLayer.Interfaces
         Task<List<GetStateListResponseModel>> GetStateList(int stateId, int UserId);
         Task<List<GetDepartmentListResponseModel>> GetDepartmentList(int DepartmentId, int UserId);
         Task<List<DesignationlistResponseModel>> GetDesignationlist(int DesignationId, int UserId);
-        
+        Task<List<CourseTypeResponseModel>> GetCourseType(int CourseTypeId,int UserId); 
+        Task<List<JobTypeResponseModel>> GetJobType(int JobTypeId, int UserId);
         string InsertUpdateDeleteLocation(LocationRequestModel LocationInfo);
         string Department_InsertUpdateDelete(DepartmentRequestModel DepartmentInfo);
         string InsertUpdateDeleteIndustryType(IndustryTypeRequestModel IndustryTypeInfo);
@@ -30,6 +31,7 @@ namespace RepositeryLayer.Interfaces
         string InsertUpdateDeleteSkillType(SkillTypeRequestModel SkillTypeInfo);
 
         string InsertUpdateDeleteJobType(JobTypeRequestModel JobTypeInfo);
+        string InsertUpdateDeleteCourseType(CourseTypeRequestModel CourseTypeInfo);
 
     }
 }

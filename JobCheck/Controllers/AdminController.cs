@@ -8,10 +8,12 @@ using CommonLayer.RequestModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using RepositeryLayer.Services;
+using RepositeryLayer;
+using RepositeryLayer.Shared;
 
 namespace JobCheck.Controllers
 {
- 
+
     [Route("api/[controller]")]
     [ApiController]
     public class AdminController : ControllerBase
@@ -25,8 +27,8 @@ namespace JobCheck.Controllers
         public IActionResult InsertUpdateDeleteLocation([FromBody] LocationRequestModel LocationInfo) {
             try
             {
-              var Message = AdminBusinesslayer.InsertUpdateDeleteLocation(LocationInfo);
-                 return Ok(new { Message });
+                var Message = AdminBusinesslayer.InsertUpdateDeleteLocation(LocationInfo);
+                return Ok(new { Message });
             }
             catch (Exception e)
             {
@@ -55,13 +57,13 @@ namespace JobCheck.Controllers
             try
             {
                 var Message = AdminBusinesslayer.InsertUpdateDeleteIndustryType(IndustryInfo);
-                return Ok( new { Message});
+                return Ok(new { Message });
             }
             catch (Exception e)
             {
 
                 throw new ApplicationException(e.Message);
-            }   
+            }
         }
         [HttpPost]
         [Route("District_InsertUpdateDelete")]
@@ -111,8 +113,8 @@ namespace JobCheck.Controllers
         {
             try
             {
-                    var Message = AdminBusinesslayer.InsertUpdateDeleteDesignation(DesignationInfo);
-                    return Ok(new { Message });
+                var Message = AdminBusinesslayer.InsertUpdateDeleteDesignation(DesignationInfo);
+                return Ok(new { Message });
             }
             catch (Exception e)
             {
@@ -138,12 +140,28 @@ namespace JobCheck.Controllers
         }
 
         [HttpPost]
-        [Route("JObType_InsertUpdateDelete")]
+        [Route("JobType_InsertUpdateDelete")]
         public IActionResult InsertUpadteDeleteJobType([FromBody] JobTypeRequestModel JobTypeInfo)
         {
             try
             {
                 var Message = AdminBusinesslayer.InsertUpdateDeleteJobType(JobTypeInfo);
+                return Ok(new { Message });
+            }
+            catch (Exception e)
+            {
+
+                throw new ApplicationException(e.Message);
+            }
+        }
+
+        [HttpPost]
+        [Route("CourseType_InsertUpdateDelete")]
+        public IActionResult InsertUpadteDeleteCourseType([FromBody] CourseTypeRequestModel CourseTypeInfo)
+        {
+            try
+            {
+                var Message = AdminBusinesslayer.InsertUpdateDeleteCourseType(CourseTypeInfo);
                 return Ok(new { Message });
             }
             catch (Exception e)
@@ -159,14 +177,14 @@ namespace JobCheck.Controllers
         {
             try
             {
-               var IndustryTypes=await AdminBusinesslayer.GETIndustryType();
-                if (IndustryTypes.Count != 0 && IndustryTypes!=null) {
+                var IndustryTypes = await AdminBusinesslayer.GETIndustryType();
+                if (IndustryTypes.Count != 0 && IndustryTypes != null) {
                     var state = true;
                     var message = "The Total Industry is listed Below";
                     return Ok(new { state, message, IndustryTypes });
                 }
                 else
-                {   
+                {
                     return NoContent();
                 }
             }
@@ -176,6 +194,8 @@ namespace JobCheck.Controllers
                 throw new ApplicationException(e.Message);
             }
         }
+
+
 
         [HttpGet]
         [Route("GETOpenJobListing")]
@@ -207,7 +227,7 @@ namespace JobCheck.Controllers
         public async Task<IActionResult> GetDistrictList(int UserId, int DistrictId) {
             try
             {
-               var DistrictList= await AdminBusinesslayer.GetDistrictList(UserId, DistrictId);
+                var DistrictList = await AdminBusinesslayer.GetDistrictList(UserId, DistrictId);
                 if (DistrictList != null && DistrictList.Count != 0)
                 {
                     var status = true;
@@ -226,14 +246,14 @@ namespace JobCheck.Controllers
                 throw new ApplicationException(e.Message);
             }
         }
-    
+
         [HttpGet]
         [Route("IndustryId/{IndustryId}/UserId/{UserId}")]
-        public async Task<IActionResult> GetIndustryList(int IndustryId,int UserId)
+        public async Task<IActionResult> GetIndustryList(int IndustryId, int UserId)
         {
             try
             {
-                var IndustryLists = await AdminBusinesslayer.GetIndustryList(IndustryId,UserId);
+                var IndustryLists = await AdminBusinesslayer.GetIndustryList(IndustryId, UserId);
                 if (IndustryLists != null && IndustryLists.Count != 0)
                 {
                     var status = true;
@@ -244,7 +264,7 @@ namespace JobCheck.Controllers
                 {
                     var status = false;
                     var message = "No Industry Found";
-                    return BadRequest(new { status, message});
+                    return BadRequest(new { status, message });
                 }
             }
             catch (Exception e)
@@ -253,10 +273,66 @@ namespace JobCheck.Controllers
                 throw new ApplicationException(e.Message);
             }
         }
-     
+
+        [HttpGet]
+        [Route("CourseTypeId/{CourseTypeId}/UserId/{UserId}")]
+        public async Task<IActionResult> GETCourseType(int CourseTypeId, int UserId)
+        {
+            try
+            {
+                var CourseType = await AdminBusinesslayer.GetCourseType(CourseTypeId, UserId);
+                if (CourseType.Count != 0 && CourseType != null)
+                {
+                    var state = true;
+                    var message = "The Total CourseType is listed Below";
+                    return Ok(new { state, message, CourseType });
+                }
+                else
+                {
+                    var state = false;
+                    var message = "The CourseType list is not Found";
+                    return Ok(new { state, message });
+                }
+            }
+            catch (Exception e)
+            {
+
+                throw new ApplicationException(e.Message);
+            }
+        }
+
+        [HttpGet]
+        [Route("JobTypeId/{JobTypeId}/UserId/{UserId}")]
+        public async Task<IActionResult> GETJobType(int JobTypeId, int UserId)
+        {
+            try
+            {
+                var JobTypelist = await AdminBusinesslayer.GetJobType(JobTypeId, UserId);
+                if (JobTypelist.Count != 0 && JobTypelist != null)
+                {
+                    var state = true;
+                    var message = "The Total JobType is listed Below";
+                    return Ok(new { state, message, JobTypelist });
+                }
+                else
+                {
+                    var state = false;
+                    var message = "The JobType list is not Found";
+                    return Ok(new { state, message });
+                }
+            }
+            catch (Exception e)
+            {
+
+                throw new ApplicationException(e.Message);
+            }
+        }
+
+
+
         [HttpGet]
         [Route("SkillTypeId/{SkillTypeId}/UserId/{UserId}")]
-        public async Task<IActionResult> GetSkillTypeList(int SkillTypeId,int UserId)
+        public async Task<IActionResult> GetSkillTypeList(int SkillTypeId, int UserId)
         {
             try
             {
@@ -420,6 +496,13 @@ namespace JobCheck.Controllers
             }
         }
 
+        //[HttpPut]
+        //public IActionResult Demo() {
+        //   string EncodedPasswrod= EncryptAndDecryptPassword.EncodePasswordToBase64("123");
+        //   string OriginalPassword= EncryptAndDecryptPassword.DecodeFrom64(EncodedPasswrod);
+        //    return null;
+        //}
+        
 
 
     }

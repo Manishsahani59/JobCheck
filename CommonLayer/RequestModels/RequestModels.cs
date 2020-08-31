@@ -20,14 +20,14 @@ namespace CommonLayer.RequestModels
        public string ActionType{get;set;}
        public long DepartmentId { get; set; } 
        public string DepartmentName { get; set; } 
-       public long DepartmentCode { get; set; }
+       public string DepartmentCode { get; set; }
        public long UserId { get; set; } 
      }
     public class IndustryTypeRequestModel {
         public string ActionType { get; set; }
         public long IndustryTypeId { get; set; }
         public string IndustryTypeName { get; set; }
-        public long IndustryTypeCode{get;set;}
+        public string IndustryTypeCode{get;set;}
         public long UserId { get; set; }
     }
     public class DistrictRequestModel { 
@@ -88,6 +88,14 @@ namespace CommonLayer.RequestModels
         public long JobTypeId { get; set; }
         public string JobTypeName { get; set; }
         public string JobTypeCode { get; set; }
+        public long UserId { get; set; }
+    }
+    public class CourseTypeRequestModel
+    {
+        public string ActionType { get; set; }
+        public long CourseTypeId { get; set; }
+        public string CourseTypeName { get; set; }
+        public string CourseTypeCode { get; set; }
         public long UserId { get; set; }
     }
 
